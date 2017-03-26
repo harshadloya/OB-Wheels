@@ -26,6 +26,9 @@ public class MainScreen extends AppCompatActivity {
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
+                case R.id.navigation_AboutUs:
+                    mTextMessage.setText(R.string.title_aboutus);
+                    return true;
             }
             return false;
         }
