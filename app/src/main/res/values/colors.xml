@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
@@ -7,8 +7,6 @@
     <color name="homeTabColor">#9E9E9E</color>
     <color name="disclaimerTabColor">#F44336</color>
     <color name="aboutAppTabColor">#9C27B0</color>
-    <color name="referencesTabColor">#00BCD4</color>
-    <color name="moreAppsTabColor">#FFFF00</color>
-    <color name="tabTextColor">#FFFFFF</color>
-
+    <color name="referencesTabColor">#009688</color>
+    <color name="moreAppsTabColor">#FF9800</color>
 </resources>

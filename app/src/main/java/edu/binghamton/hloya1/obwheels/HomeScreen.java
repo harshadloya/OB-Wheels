@@ -14,15 +14,11 @@ import android.widget.TextView;
 
 public class HomeScreen extends Fragment
 {
-    //private TextView mTextMessage;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState)
     {
-        //return super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.home_screen, container, false);
-        //mTextMessage.setText(R.string.title_home);
-        return v;
+        View view = inflater.inflate(R.layout.home_screen, container, false);
+        return view;
     }
 }

@@ -16,5 +16,19 @@
     <string name="aboutapp_text">"Development of App\n\nWritten to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton,\n\tBinghamton, NY\n\n\nFeedback:\njds.pocapps@gmail.com or hloya1@binghamton.edu\nPlatform: Android 4.0.3 and later\nVersion: 1.0\nCopyright: March, 2017"</string>
     <string name="ref_text">"References\n\nMethod for Estimating Due Date.\nAmerican College of Obstetricians and Gynecologists (ACOG).  Committee Opinion Number 611.  Obst Gyn vol. 124, no. 4, October, 2014.\n\nBennett KA, et. al. First trimester ultrasound screening is effective in reducing postterm labor induction rates: a randomized controlled trial. Am J Obst Gyn 2004;190:1077–81.\n\nWhitworth M, et. al. Ultrasound for fetal assessment in early pregnancy. Cochrane Database of Systematic Reviews 2010, Issue 4. Art. No.: CD007058.\n\nWegienka G, Baird DD. A comparison of recalled date of last menstrual period with prospectively recorded dates. J Womens Health 2005;14:248–52."</string>
 
+    <!-- Main Screen Texts -->
+    <string name="alertTitle">"Welcome"</string>
+    <string name="alertMessage">"This app provides methods for determining EDD and EGA.\nThe traditional handheld cardboard calendar where is here as well as calendar calculators.\nThe app also reviews how to handle and reconcile a final due date from those suggested by the LMP and Sono."</string>
+    <string name="alertButtonName">"Get Started"</string>
+
+    <!-- Home Screen Texts -->
+    <string name="home_screen_text">"Choose a resource for determining estimated due date (EDD), estimated gestational age (EGA) and setting a final EDD"</string>
+    <string name="home_screen_button1">"Calendar Based Calculators"</string>
+    <string name="home_screen_button2">"Traditional OB Wheel"</string>
+    <string name="home_screen_button3">"Setting EDD from LMP &amp; Sono"</string>
+    <string name="home_screen_belowButton1">"Determine EDD &amp; EGA via LMP, Sono, etc."</string>
+    <string name="home_screen_belowButton2">"It's the real wheel, clunky but accurate"</string>
+    <string name="home_screen_belowButton3">"Scheme for using LMP and Sonogram to determine final EDD (for students &amp; residents)"</string>
+
 
 </resources>
