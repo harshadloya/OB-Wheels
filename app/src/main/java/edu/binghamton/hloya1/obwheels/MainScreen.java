@@ -1,5 +1,6 @@
 package edu.binghamton.hloya1.obwheels;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -80,6 +83,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
         alertDialog.show();
+
     }
 
 
