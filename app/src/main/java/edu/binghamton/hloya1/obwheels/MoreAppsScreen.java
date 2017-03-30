@@ -3,6 +3,7 @@ package edu.binghamton.hloya1.obwheels;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class MoreAppsScreen extends Fragment
 
         mTextMessage = (TextView) view.findViewById(R.id.message);
         mTextMessage.setText(R.string.title_moreApps);
+        mTextMessage.setMovementMethod(new ScrollingMovementMethod());
 
         return view;
 

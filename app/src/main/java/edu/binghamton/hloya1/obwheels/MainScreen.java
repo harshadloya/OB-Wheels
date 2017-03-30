@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -80,5 +81,7 @@ public class MainScreen extends AppCompatActivity {
         });
         alertDialog.show();
     }
+
+
 
 }

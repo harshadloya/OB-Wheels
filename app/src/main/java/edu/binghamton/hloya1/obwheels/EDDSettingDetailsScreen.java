@@ -13,7 +13,7 @@ import android.widget.TextView;
  * Created by hloya on 3/29/2017.
  */
 
-public class AboutAppScreen extends Fragment
+public class EDDSettingDetailsScreen extends Fragment
 {
     private TextView mTextMessage;
 
@@ -21,14 +21,12 @@ public class AboutAppScreen extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
+        View view = inflater.inflate(R.layout.eddsettingdetails_screen, container, false);
 
-        View view = inflater.inflate(R.layout.aboutapp_screen, container, false);
-
-        mTextMessage = (TextView) view.findViewById(R.id.message);
-        mTextMessage.setText(R.string.aboutapp_text);
+        mTextMessage = (TextView) view.findViewById(R.id.data);
+        mTextMessage.setText(R.string.eddsettingdetails_screen_data);
         mTextMessage.setMovementMethod(new ScrollingMovementMethod());
 
         return view;
-
     }
 }

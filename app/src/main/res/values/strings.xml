@@ -12,8 +12,14 @@
     <string name="title_aboutApp">About App</string>
     <string name="title_ref">References</string>
     <string name="title_moreApps">More Apps</string>
+
+    <!-- Disclaimer Screen Texts -->
     <string name="disclaimer_text">"Accuracy &amp; Disclaimer\n\nCalendar:  The calendar is accurate even in leap years.  But you have to know how to apply this information to individual patient care and make adjustments as clinically appropriate.\n\nOB wheel:  Most cardboard wheels have some inaccuracy.  I have found this wheel to be geometrically and clinically accurate (except for leap years as there is no adjustment for a February with 29 days).  However, if you are uncertain about the results, feel free to double-check on the calendar calculator.  It is based upon your discretion and clinical judgement whether and how to use the cycle length adjustment or stick with the standard 28 day cycle.\n\nScheme for reconciling LMP &amp; Sono EDD's:  there are several schemes in clinical use for setting a final due date from the LMP and Sono.  I am unaware of evidence which proves any one scheme superior to another.  I have presented the ACOG scheme because we use it in our practice.  If you prefer another scheme, you may use your discretion and use it.\n\nIf you suspect there is an inaccuracy in any of the tools in this app, please contact me as soon as possible.\n\nFinally, like all my apps, this tool provides information about care of patients in general.  But it may not provide guidance on the single unique patient before you this moment.  This tool is no substitute for training, experience, and judgment.  You must already know all about setting due dates and gestational ages, this tool merely puts assistance at your fingertips.  Individualize your care to your patient, your local standards, your local resources, and new information as it comes out.\n"</string>
+
+    <!-- About App Screen Texts -->
     <string name="aboutapp_text">"Development of App\n\nWritten to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton,\n\tBinghamton, NY\n\n\nFeedback:\njds.pocapps@gmail.com or hloya1@binghamton.edu\nPlatform: Android 4.0.3 and later\nVersion: 1.0\nCopyright: March, 2017"</string>
+
+    <!-- References Screen Texts -->
     <string name="ref_text">"References\n\nMethod for Estimating Due Date.\nAmerican College of Obstetricians and Gynecologists (ACOG).  Committee Opinion Number 611.  Obst Gyn vol. 124, no. 4, October, 2014.\n\nBennett KA, et. al. First trimester ultrasound screening is effective in reducing postterm labor induction rates: a randomized controlled trial. Am J Obst Gyn 2004;190:1077–81.\n\nWhitworth M, et. al. Ultrasound for fetal assessment in early pregnancy. Cochrane Database of Systematic Reviews 2010, Issue 4. Art. No.: CD007058.\n\nWegienka G, Baird DD. A comparison of recalled date of last menstrual period with prospectively recorded dates. J Womens Health 2005;14:248–52."</string>
 
     <!-- Main Screen Texts -->
@@ -30,5 +36,38 @@
     <string name="home_screen_belowButton2">"It's the real wheel, clunky but accurate"</string>
     <string name="home_screen_belowButton3">"Scheme for using LMP and Sonogram to determine final EDD (for students &amp; residents)"</string>
 
+    <!-- EDD Setting Details Screen Texts -->
+    <string name="eddsettingdetails_screen_data">"ACOG 2014 (see ref) dating scheme.  Discussion follows:
+\n
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUse Sono-EDD if differs
+EGA via LMP\t\t\t\t\t\t\tfrom LMP-EDD by:
+≤ 8 6/7 wks\t\t\t\t\t\t\t\t\t\t> 5 days
+9  to 15 6/7 wks\t\t\t\t\t\t\t> 7 days
+16 to 21 6/7 wks\t\t\t\t\t\t> 10 days
+22 to 27 6/7 wks\t\t\t\t\t\t> 14 days
+≥ 28 wks\t\t\t\t\t\t\t\t\t\t\t\t\t> 21 days and
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tproceed cautiously
 
+-------------------------------------------------
+
+The determination of a pregnant woman’s due date is of great importance to pregnancy care.  All expectations and evaluations and management considerations depend on knowing where one stands in the time course of pregnancy.  This is a short review mainly for students and residents on how to determine the estimated due date (EDD).  There are nuances (i.e. varying cycle length) and special situations (i.e. assisted reproductive techniques) which are outside the scope of this simple discussion which focuses on the typical pregnant woman.
+\n
+A clinician typically has two pieces of data from which to estimate the due date.  First is the first day of the last normal menstrual period (LMP). By longstanding convention, one adds 280 days, that is 40 weeks, to the first day of the LMP and arrives at the first estimation of the due date.
+\n
+We clinicians have a preference for clinical data.  But sonographic measurement of estimated gestational age (EGA) and extrapolation to an EDD is also quite accurate.  Thus sonography is typically the second piece of data which informs EDD determination.  A good case can be made for routinely getting an early sonogram for the express purpose of EDD determination [Cochrane 2010, see references].  The earlier the sonogram, the more accurate it is for assigning an EDD.  The earliest sonogram measuring a crown-rump length (but not earlier) is optimal.  Often the LMP-based EDD will differ from the Sono-based EDD.  How can one reconcile these and arrive at a single final EDD?
+\n
+Again, start with the information obtained on history of the LMP to get the LMP-based EDD.  Then compare that LMP-based EDD to a Sono-based EDD from the earilest sonogram, preferably one measuring a crown-rump length.  Given that sonograms are pretty accurate and LMPs can be inaccurate [Wegienka 2005, Bennett 2004, see references], if the Sono-based EDD is quite different from the LMP-based EDD, then dismiss the LMP-based EDD as inaccurate and let the Sono-based EDD prevail as the final EDD.  However, if the Sono-based EDD is pretty close to the LMP-based EDD, the LMP-based EDD prevails and the sonogram is said to “confirm” the LMP-based EDD.  How close is “pretty close” and how divergent is “quite different”? ACOG (2014, see references) gives the following scheme
+
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUse Sono-EDD if differs
+EGA via LMP\t\t\t\t\t\t\tfrom LMP-EDD by:
+≤ 8 6/7 wks\t\t\t\t\t\t\t\t\t\t\t> 5 days
+9  to 15 6/7 wks\t\t\t\t\t\t\t> 7 days
+16 to 21 6/7 wks\t\t\t\t\t\t> 10 days
+22 to 27 6/7 wks\t\t\t\t\t\t> 14 days
+≥ 28 wks\t\t\t\t\t\t\t\t\t\t\t\t\t> 21 days and
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tproceed cautiously
+
+-------------------------------------------------
+
+There are many schemes for reconciling LMP &amp; Sono-based due dates into a final due date. I am unaware of evidence comparing any one scheme to another. I have no opinion on whether this scheme (ACOG's) is superior to any other but, I do know that members of a practice must share a single approach to so as to avoid argument over this cornerstone of pregnancy care. I have noted this scheme here so that my residents can easily and effectively refer to this single scheme. You, of course, can use any scheme you prefer."</string>
 </resources>
