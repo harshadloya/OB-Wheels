@@ -85,7 +85,4 @@ public class MainScreen extends AppCompatActivity {
         alertDialog.show();
 
     }
-
-
-
 }

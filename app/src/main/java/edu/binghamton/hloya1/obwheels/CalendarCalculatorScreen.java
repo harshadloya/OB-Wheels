@@ -1,19 +1,15 @@
 package edu.binghamton.hloya1.obwheels;
 
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by hloya on 3/29/2017.
@@ -22,6 +18,7 @@ import java.util.List;
 public class CalendarCalculatorScreen extends Fragment
 {
     private EditText editText;
+    private Button button;
     private int year, month, day;
     @Nullable
     @Override
@@ -33,6 +30,18 @@ public class CalendarCalculatorScreen extends Fragment
         //Handling all the editText fields together
         editTextListRecurse((ViewGroup) view);
 
+        button = (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                EDDSettingDetailsScreen eddSettingDetailsScreen = new EDDSettingDetailsScreen();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content, eddSettingDetailsScreen);
+                fragmentTransaction.addToBackStack("replaceWithEDDSettingDetailsScreen");
+                fragmentTransaction.commit();
+            }
+        });
 
 
         return view;

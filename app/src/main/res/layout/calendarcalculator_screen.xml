@@ -29,8 +29,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:text="Dating By:"
             android:textSize="17sp" />
@@ -40,8 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView1"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
             android:layout_toEndOf="@+id/textView1"
             android:layout_toRightOf="@+id/textView1"
             android:text="LMP or EDD"
@@ -77,13 +77,13 @@
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView4"
-            android:layout_marginLeft="40dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
             android:layout_toEndOf="@+id/textView4"
             android:layout_toRightOf="@+id/textView4"
+            android:editable="false"
             android:ems="10"
             android:hint="Enter Date"
-            android:editable="false"
             android:textAlignment="center" />
 
         <EditText
@@ -255,12 +255,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView15"
-            android:layout_marginLeft="150dp"
-            android:layout_marginStart="150dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
             android:layout_toEndOf="@+id/textView15"
             android:layout_toRightOf="@+id/textView15"
             android:text="39 weeks, 6days"
             android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_below="@+id/textView16"
+            android:layout_marginTop="30dp"
+            android:text="Reconcile LMP &amp; Sono EDD's" />
 
     </RelativeLayout>
 

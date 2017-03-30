@@ -33,7 +33,10 @@ public class HomeScreen extends Fragment
             public void onClick(View v)
             {
                 CalendarCalculatorScreen calendarCalculatorScreen = new CalendarCalculatorScreen();
-                getFragmentManager().beginTransaction().replace(R.id.content, calendarCalculatorScreen).commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content, calendarCalculatorScreen);
+                fragmentTransaction.addToBackStack("replaceWithCalendarCalculatorScreen");
+                fragmentTransaction.commit();
             }
         });
 
@@ -43,7 +46,10 @@ public class HomeScreen extends Fragment
             public void onClick(View v)
             {
                 TraditionalObWheelScreen traditionalObWheelScreen = new TraditionalObWheelScreen();
-                getFragmentManager().beginTransaction().replace(R.id.content, traditionalObWheelScreen).commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content, traditionalObWheelScreen);
+                fragmentTransaction.addToBackStack("replaceWithTraditionalObWheelScreen");
+                fragmentTransaction.commit();
             }
         });
 
@@ -53,7 +59,10 @@ public class HomeScreen extends Fragment
             public void onClick(View v)
             {
                 EDDSettingDetailsScreen eddSettingDetailsScreen = new EDDSettingDetailsScreen();
-                getFragmentManager().beginTransaction().replace(R.id.content, eddSettingDetailsScreen).commit();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content, eddSettingDetailsScreen);
+                fragmentTransaction.addToBackStack("replaceWithEDDSettingDetailsScreen");
+                fragmentTransaction.commit();
             }
         });
 
