@@ -1,7 +1,5 @@
 package edu.binghamton.hloya1.obwheels;
 
-import android.app.DatePickerDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
@@ -10,11 +8,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.DatePicker;
 import android.widget.EditText;
 
+
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -24,7 +21,7 @@ import java.util.List;
 
 public class CalendarCalculatorScreen extends Fragment
 {
-    private EditText editText1;
+    private EditText editText;
     private int year, month, day;
     @Nullable
     @Override
@@ -32,53 +29,77 @@ public class CalendarCalculatorScreen extends Fragment
     {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.calendarcalculator_screen, container, false);
-        editText1 = (EditText) view.findViewById(R.id.editText1);
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        //Handling all the editText fields together
+        editTextListRecurse((ViewGroup) view);
 
 
-
-        editText1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-
-                if(hasFocus)
-                {
-                    //Calendar calendar = Calendar.getInstance();
-                    //year = calendar.get(Calendar.YEAR);
-                    //month = calendar.get(Calendar.MONTH);
-                    //day = calendar.get(Calendar.DAY_OF_MONTH);
-
-                    //DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), mOnDateSetListener, year, month, day);
-                    //InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                    //imm.hideSoftInputFromWindow(viewContainer.getWindowToken(), 0);
-                    //getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-                    //datePickerDialog.show();
-
-                    DateDialog dialog = new DateDialog(v);
-                    FragmentTransaction ft = getFragmentManager().beginTransaction();
-
-                    //InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                    //imm.hideSoftInputFromInputMethod(container.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY);
-
-                    dialog.show(ft, "DatePicker");
-
-
-
-                }
-            }
-        });
 
         return view;
     }
 
-    private DatePickerDialog.OnDateSetListener mOnDateSetListener = new DatePickerDialog.OnDateSetListener() {
+    private void editTextListRecurse(ViewGroup container)
+    {
+        int count = container.getChildCount();
+        for (int i = 0; i < count; i++) {
+            View child = container.getChildAt(i);
+            if (child instanceof EditText)
+            {
+                editText = (EditText) child;
+                System.out.println(editText.getId());
+                System.out.println(R.id.editText3);
+                System.out.println(R.id.editText4);
+                int currId = editText.getId();
+                int editText3Id = R.id.editText3;
+                int editText4Id = R.id.editText4;
+                if((currId == editText3Id) || (currId == editText4Id))
+                {
+                    //Nothing to do - will use default keyboard
+                }
+                else
+                {
+                    editText.setOnFocusChangeListener(mOnFocusChangeListener);
+                }
+            }
+            else if (child instanceof ViewGroup)
+            {
+                //recurse through children views
+                editTextListRecurse((ViewGroup) child);
+            }
+        }
+    }
 
+    private View.OnFocusChangeListener mOnFocusChangeListener = new View.OnFocusChangeListener()
+    {
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+
+            if(hasFocus)
+            {
+                /*
+                Calendar calendar = Calendar.getInstance();
+                int xyear = calendar.get(Calendar.YEAR);
+                int xmonth = calendar.get(Calendar.MONTH);
+                int xday = calendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), mOnDateSetListener, xyear, xmonth, xday);
+                datePickerDialog.show();
+                */
+                DateDialog dialog = new DateDialog(v);
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                dialog.show(ft, "DatePicker");
+            }
+        }
+    };
+
+
+    /*
+    private DatePickerDialog.OnDateSetListener mOnDateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-            String date = (month+1) + "/" + day + "/" + year;
+            String date = (month+1) + "/" + dayOfMonth + "/" + year;
             editText1.setText(date);
         }
-
     };
+    */
 }
