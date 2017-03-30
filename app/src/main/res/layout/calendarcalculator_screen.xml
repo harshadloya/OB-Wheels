@@ -83,6 +83,7 @@
             android:layout_toRightOf="@+id/textView4"
             android:ems="10"
             android:hint="Enter Date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <EditText
@@ -96,7 +97,7 @@
             android:layout_toRightOf="@+id/editText1"
             android:ems="10"
             android:hint="Enter Date"
-            android:inputType="date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <TextView
@@ -180,7 +181,7 @@
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
             android:hint="Enter Date"
-            android:inputType="date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <EditText
@@ -194,7 +195,7 @@
             android:layout_toRightOf="@+id/editText5"
             android:ems="10"
             android:hint="Enter Date"
-            android:inputType="date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <TextView
@@ -219,7 +220,7 @@
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
             android:hint="Enter Date"
-            android:inputType="date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <EditText
@@ -233,7 +234,7 @@
             android:layout_toRightOf="@+id/editText7"
             android:ems="10"
             android:hint="Enter Date"
-            android:inputType="date"
+            android:editable="false"
             android:textAlignment="center" />
 
         <TextView
