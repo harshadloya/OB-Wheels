@@ -36,6 +36,15 @@ public class CalendarCalculatorScreen extends Fragment
     private EditText editText6;
     private EditText editText7;
     private EditText editText8;
+    private TextView textView16;
+    private TextView textView17;
+
+    CalculationsForCalendarScreen cs1;
+    CalculationsForCalendarScreen cs2;
+    CalculationsForCalendarScreen cs3;
+    CalculationsForCalendarScreen cs4;
+    CalculationsForCalendarScreen cs7;
+    CalculationsForCalendarScreen cs8;
 
     private Button button;
     private int year, month, day;
@@ -72,10 +81,14 @@ public class CalendarCalculatorScreen extends Fragment
         editText7 = (EditText) view.findViewById(R.id.editText7);
         editText8 = (EditText) view.findViewById(R.id.editText8);
 
-        //Update EDD if LMP value entered
-        CalculationsForCalendarScreen cs = new CalculationsForCalendarScreen(editText1, editText5);
-        //Update EDD if Sono value entered
-        CalculationsForCalendarScreen cs2 = new CalculationsForCalendarScreen(editText2, editText6);
+        textView16 = (TextView) view.findViewById(R.id.lmpega);
+        textView17 = (TextView) view.findViewById(R.id.sonoega);
+
+        //Default Initializing EGA as of to current date
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(new Date());
+        editText7.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
+        editText8.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
 
         return view;
     }
@@ -108,44 +121,6 @@ public class CalendarCalculatorScreen extends Fragment
         }
     }
 
-    /*
-    private TextWatcher watcher = new TextWatcher()
-    {
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count)
-        {
-            String date = s.toString();
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-            Calendar calendar = Calendar.getInstance();
-
-            try
-            {
-                Date inputDate = simpleDateFormat.parse(date);
-                calendar.setTime(inputDate);
-                calendar.add(Calendar.DATE, 280);
-                editText5.setText(simpleDateFormat.format(calendar.getTime()));
-
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after)
-        {
-
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
-    */
-
-
 
     private View.OnFocusChangeListener mOnFocusChangeListener = new View.OnFocusChangeListener()
     {
@@ -167,10 +142,36 @@ public class CalendarCalculatorScreen extends Fragment
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 dialog.show(ft, "DatePicker");
 
+                //Update EDD if LMP value entered
+                if(v.getId() == editText1.getId())
+                {
+                    cs1 = new CalculationsForCalendarScreen(editText1, editText5, editText7, textView16);
+                }
+
+                //Update EDD if Sono value entered
+                else if(v.getId() == editText2.getId())
+                {
+                    cs2 = new CalculationsForCalendarScreen(editText2, editText6, editText8, textView17);
+                }
+
                 //Update LMP if EDD value entered
-                //CalculationsForCalendarScreen cs3 = new CalculationsForCalendarScreen(editText5, editText1);
+                else if(v.getId() == editText5.getId()) {
+//                    cs3 = new CalculationsForCalendarScreen(editText5, editText1);
+                }
+
                 //Update Sono if EDD value entered
-                //CalculationsForCalendarScreen cs4 = new CalculationsForCalendarScreen(editText6, editText2);
+                else if(v.getId() == editText6.getId())
+                {
+  //                  cs4 = new CalculationsForCalendarScreen(editText6, editText2);
+                }
+                else if(v.getId() == editText7.getId())
+                {
+                    cs7 = new CalculationsForCalendarScreen(editText1, editText7, textView16);
+                }
+                else if(v.getId() == editText8.getId())
+                {
+                    cs8 = new CalculationsForCalendarScreen(editText2, editText8, textView17);
+                }
             }
         }
     };
