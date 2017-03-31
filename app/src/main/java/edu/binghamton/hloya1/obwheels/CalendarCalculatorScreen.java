@@ -108,6 +108,7 @@ public class CalendarCalculatorScreen extends Fragment
         }
     }
 
+    /*
     private TextWatcher watcher = new TextWatcher()
     {
 
@@ -142,6 +143,7 @@ public class CalendarCalculatorScreen extends Fragment
 
         }
     };
+    */
 
 
 
