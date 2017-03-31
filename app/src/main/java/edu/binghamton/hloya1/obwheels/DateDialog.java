@@ -12,6 +12,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
@@ -39,12 +41,18 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         //getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         //getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        return new DatePickerDialog(getActivity(), this, year, month, day);
+        DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), this, year, month, day);
+
+        if(editText.getId() == R.id.editText1 || editText.getId() == R.id.editText2)
+            datePickerDialog.getDatePicker().setMaxDate(calendar.getTimeInMillis());
+
+        return datePickerDialog;
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day)
     {
-        String date = (month+1) + "/" + day + "/" + year;
+
+        String date = String.format("%02d", (month+1)) + "/" + String.format("%02d", day) + "/" + year;
         editText.setText(date);
     }
 }
