@@ -70,4 +70,21 @@ EGA via LMP\t\t\t\t\t\t\tfrom LMP-EDD by:
 -------------------------------------------------
 
 There are many schemes for reconciling LMP &amp; Sono-based due dates into a final due date. I am unaware of evidence comparing any one scheme to another. I have no opinion on whether this scheme (ACOG's) is superior to any other but, I do know that members of a practice must share a single approach to so as to avoid argument over this cornerstone of pregnancy care. I have noted this scheme here so that my residents can easily and effectively refer to this single scheme. You, of course, can use any scheme you prefer."</string>
+
+    <!-- Calculator Screen Texts -->
+    <string name="ScreenName">"EDD Calculator Screen"</string>
+    <string name="LMP_EGA">"LMP Date Missing"</string>
+    <string name="SONO_EGA">"SONO Date Missing"</string>
+    <string name="ReconcileButton">"Reconcile LMP &amp; Sono EDD's"</string>
+    <string name="EGA">"EGA"</string>
+    <string name="EgaAsOf">"EGA as of"</string>
+    <string name="EDD">"EDD"</string>
+    <string name="EditTextHint">"Enter Date"</string>
+    <string name="days">"d"</string>
+    <string name="weeks">"w"</string>
+    <string name="SonoEGA">"SONO EGA"</string>
+    <string name="DateOf">"Date of"</string>
+    <string name="Sono">"Sono"</string>
+    <string name="LMPorEDD">"LMP or EDD"</string>
+    <string name="DatingBy">"Dating By:"</string>
 </resources>

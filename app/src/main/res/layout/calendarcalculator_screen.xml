@@ -15,7 +15,7 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:textSize="20sp"
-        android:text="EDD Calculator Screen" />
+        android:text="@string/ScreenName" />
 
     <RelativeLayout
         android:id="@+id/calendarCalculatorScreenRelative"
@@ -32,7 +32,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
-            android:text="Dating By:"
+            android:text="@string/DatingBy"
             android:textSize="17sp" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_marginStart="35dp"
             android:layout_toEndOf="@+id/textView1"
             android:layout_toRightOf="@+id/textView1"
-            android:text="LMP or EDD"
+            android:text="@string/LMPorEDD"
             android:textSize="19sp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:layout_marginStart="75dp"
             android:layout_toEndOf="@+id/textView2"
             android:layout_toRightOf="@+id/textView2"
-            android:text="Sono"
+            android:text="@string/Sono"
             android:textSize="19sp" />
 
         <TextView
@@ -69,7 +69,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:text="Date of"
+            android:text="@string/DateOf"
             android:textSize="16sp" />
 
         <EditText
@@ -83,7 +83,7 @@
             android:layout_toRightOf="@+id/textView4"
             android:editable="false"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:textAlignment="center" />
 
         <EditText
@@ -96,7 +96,7 @@
             android:layout_toEndOf="@+id/editText1"
             android:layout_toRightOf="@+id/editText1"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -110,7 +110,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="30dp"
-            android:text="SONO EGA"
+            android:text="@string/SonoEGA"
             android:textSize="16sp" />
 
         <EditText
@@ -134,7 +134,7 @@
             android:layout_marginStart="2dp"
             android:layout_toEndOf="@+id/editText3"
             android:layout_toRightOf="@+id/editText3"
-            android:text="w" />
+            android:text="@string/weeks" />
 
         <EditText
             android:id="@+id/editText4"
@@ -157,7 +157,7 @@
             android:layout_marginStart="2dp"
             android:layout_toEndOf="@+id/editText4"
             android:layout_toRightOf="@+id/editText4"
-            android:text="d" />
+            android:text="@string/days" />
 
         <TextView
             android:id="@+id/textView13"
@@ -169,7 +169,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:text="EDD"
+            android:text="@string/EDD"
             android:textSize="16sp" />
 
         <EditText
@@ -180,7 +180,7 @@
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -194,7 +194,7 @@
             android:layout_toEndOf="@+id/editText5"
             android:layout_toRightOf="@+id/editText5"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -208,7 +208,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:text="EGA as of"
+            android:text="@string/EgaAsOf"
             android:textSize="16sp" />
 
         <EditText
@@ -219,7 +219,7 @@
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -233,7 +233,7 @@
             android:layout_toEndOf="@+id/editText7"
             android:layout_toRightOf="@+id/editText7"
             android:ems="10"
-            android:hint="Enter Date"
+            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -247,20 +247,32 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="30dp"
-            android:text="EGA"
+            android:text="@string/EGA"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/lmpega"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView15"
-            android:layout_marginLeft="140dp"
-            android:layout_marginStart="140dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
             android:layout_toEndOf="@+id/textView15"
             android:layout_toRightOf="@+id/textView15"
-            android:text="39 weeks, 6days"
-            android:textSize="21sp" />
+            android:text="@string/LMP_EGA"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/sonoega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView15"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/lmpega"
+            android:layout_toRightOf="@+id/lmpega"
+            android:text="@string/SONO_EGA"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/button"
@@ -268,9 +280,9 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView1"
             android:layout_alignStart="@+id/textView1"
-            android:layout_below="@+id/textView16"
+            android:layout_below="@+id/lmpega"
             android:layout_marginTop="30dp"
-            android:text="Reconcile LMP &amp; Sono EDD's" />
+            android:text="@string/ReconcileButton" />
 
     </RelativeLayout>
 
