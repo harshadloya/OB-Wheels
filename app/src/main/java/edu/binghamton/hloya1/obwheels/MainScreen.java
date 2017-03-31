@@ -5,6 +5,8 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -22,35 +24,46 @@ public class MainScreen extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item)
         {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             switch (item.getItemId())
             {
                 case R.id.navigation_home:
                     HomeScreen homeScreen = new HomeScreen();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, homeScreen).commit();
+                    fragmentTransaction.replace(R.id.content, homeScreen);
+                    fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.mainScreenTabColor));
                     return true;
 
                 case R.id.navigation_disclaimer:
                     DisclaimerScreen disclaimerScreen = new DisclaimerScreen();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, disclaimerScreen).commit();
+                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentTransaction.replace(R.id.content, disclaimerScreen);
+                    fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.disclaimerTabColor));
                     return true;
 
                 case R.id.navigation_aboutApp:
                     AboutAppScreen aboutAppScreen = new AboutAppScreen();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, aboutAppScreen).commit();
+                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentTransaction.replace(R.id.content, aboutAppScreen);
+                    fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.aboutAppTabColor));
                     return true;
 
                 case R.id.navigation_references:
                     ReferencesScreen referencesScreen = new ReferencesScreen();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, referencesScreen).commit();
+                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentTransaction.replace(R.id.content, referencesScreen);
+                    fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.referencesTabColor));
                     return true;
 
                 case R.id.navigation_moreApps:
                     MoreAppsScreen moreAppsScreen = new MoreAppsScreen();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.content, moreAppsScreen).commit();
+                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentTransaction.replace(R.id.content, moreAppsScreen);
+                    fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.moreAppsTabColor));
                     return true;
             }
