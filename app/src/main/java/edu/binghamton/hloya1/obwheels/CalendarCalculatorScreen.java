@@ -4,18 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -36,8 +31,8 @@ public class CalendarCalculatorScreen extends Fragment
     private EditText editText6;
     private EditText editText7;
     private EditText editText8;
-    private TextView textView16;
-    private TextView textView17;
+    private TextView lmpega;
+    private TextView sonoega;
 
     CalculationsForCalendarScreen cs1;
     CalculationsForCalendarScreen cs2;
@@ -47,7 +42,8 @@ public class CalendarCalculatorScreen extends Fragment
     CalculationsForCalendarScreen cs8;
 
     private Button button;
-    private int year, month, day;
+    //private int year, month, day;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -73,22 +69,34 @@ public class CalendarCalculatorScreen extends Fragment
 
 
         editText1 = (EditText) view.findViewById(R.id.editText1);
+
         editText2 = (EditText) view.findViewById(R.id.editText2);
+
         editText3 = (EditText) view.findViewById(R.id.editText3);
+        editText3.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "40")});
+
         editText4 = (EditText) view.findViewById(R.id.editText4);
+        editText4.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "6")});
+
         editText5 = (EditText) view.findViewById(R.id.editText5);
+
         editText6 = (EditText) view.findViewById(R.id.editText6);
+
         editText7 = (EditText) view.findViewById(R.id.editText7);
+
         editText8 = (EditText) view.findViewById(R.id.editText8);
 
-        textView16 = (TextView) view.findViewById(R.id.lmpega);
-        textView17 = (TextView) view.findViewById(R.id.sonoega);
+        lmpega = (TextView) view.findViewById(R.id.lmpega);
+        sonoega = (TextView) view.findViewById(R.id.sonoega);
 
         //Default Initializing EGA as of to current date
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
         editText7.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
         editText8.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
+
+        cs3 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega);
+        cs4 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega);
 
         return view;
     }
@@ -106,7 +114,7 @@ public class CalendarCalculatorScreen extends Fragment
                 int currId = editText.getId();
                 if((currId == R.id.editText3) || (currId == R.id.editText4))
                 {
-                    //Nothing to do - will use default keyboard
+                    //Do nothing - Use default system keypad
                 }
                 else
                 {
@@ -120,7 +128,6 @@ public class CalendarCalculatorScreen extends Fragment
             }
         }
     }
-
 
     private View.OnFocusChangeListener mOnFocusChangeListener = new View.OnFocusChangeListener()
     {
@@ -145,32 +152,36 @@ public class CalendarCalculatorScreen extends Fragment
                 //Update EDD if LMP value entered
                 if(v.getId() == editText1.getId())
                 {
-                    cs1 = new CalculationsForCalendarScreen(editText1, editText5, editText7, textView16);
+                    cs1 = new CalculationsForCalendarScreen(editText1, editText5, editText7, lmpega);
                 }
 
                 //Update EDD if Sono value entered
                 else if(v.getId() == editText2.getId())
                 {
-                    cs2 = new CalculationsForCalendarScreen(editText2, editText6, editText8, textView17);
+                    cs2 = new CalculationsForCalendarScreen(editText2, editText6, editText8, sonoega);
                 }
 
                 //Update LMP if EDD value entered
                 else if(v.getId() == editText5.getId()) {
-//                    cs3 = new CalculationsForCalendarScreen(editText5, editText1);
+//                    cs5 = new CalculationsForCalendarScreen(editText5, editText1);
                 }
 
                 //Update Sono if EDD value entered
                 else if(v.getId() == editText6.getId())
                 {
-  //                  cs4 = new CalculationsForCalendarScreen(editText6, editText2);
+  //                  cs6 = new CalculationsForCalendarScreen(editText6, editText2);
                 }
+
+                //Update LMP EGA if EGA as of value entered
                 else if(v.getId() == editText7.getId())
                 {
-                    cs7 = new CalculationsForCalendarScreen(editText1, editText7, textView16);
+                    cs7 = new CalculationsForCalendarScreen(editText1, editText7, lmpega);
                 }
+
+                //Update Sono EGA if EGA as of value entered
                 else if(v.getId() == editText8.getId())
                 {
-                    cs8 = new CalculationsForCalendarScreen(editText2, editText8, textView17);
+                    cs8 = new CalculationsForCalendarScreen(editText2, editText8, sonoega);
                 }
             }
         }

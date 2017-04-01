@@ -20,6 +20,7 @@
     <string name="aboutapp_text">"Development of App\n\nWritten to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton,\n\tBinghamton, NY\n\n\nFeedback:\njds.pocapps@gmail.com or hloya1@binghamton.edu\nPlatform: Android 4.0.3 and later\nVersion: 1.0\nCopyright: March, 2017"</string>
 
     <!-- References Screen Texts -->
+    <string name="ref_screen_text">"References Screen"</string>
     <string name="ref_text">"References\n\nMethod for Estimating Due Date.\nAmerican College of Obstetricians and Gynecologists (ACOG).  Committee Opinion Number 611.  Obst Gyn vol. 124, no. 4, October, 2014.\n\nBennett KA, et. al. First trimester ultrasound screening is effective in reducing postterm labor induction rates: a randomized controlled trial. Am J Obst Gyn 2004;190:1077–81.\n\nWhitworth M, et. al. Ultrasound for fetal assessment in early pregnancy. Cochrane Database of Systematic Reviews 2010, Issue 4. Art. No.: CD007058.\n\nWegienka G, Baird DD. A comparison of recalled date of last menstrual period with prospectively recorded dates. J Womens Health 2005;14:248–52."</string>
 
     <!-- Main Screen Texts -->
@@ -87,4 +88,13 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
     <string name="Sono">"Sono"</string>
     <string name="LMPorEDD">"LMP or EDD"</string>
     <string name="DatingBy">"Dating By:"</string>
+
+    <!-- More Apps Screen Texts -->
+    <string name="moreAppsScreen_title">
+        "More apps for clinicians
+            by Joshua Steinberg MD"
+    </string>
+    <string name="moreAppsScreen_text">"I keep a list of apps* written by anyone (mostly others) which I recommend for clinicians, nurses, residents, and students serving many fields of medicine, especially my home of full-spectrum family medicine. A copy is always online here."</string>
+    <string name="moreAppsScreen_button">"More Apps List"</string>
+    <string name="moreAppsScreen_text2">"* I have no financial relationship or financial benefit from any of these apps, even my own."</string>
 </resources>

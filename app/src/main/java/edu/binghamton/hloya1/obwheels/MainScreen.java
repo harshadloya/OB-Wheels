@@ -30,6 +30,7 @@ public class MainScreen extends AppCompatActivity {
             {
                 case R.id.navigation_home:
                     HomeScreen homeScreen = new HomeScreen();
+                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, homeScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.mainScreenTabColor));
