@@ -88,4 +88,13 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
     <string name="Sono">"Sono"</string>
     <string name="LMPorEDD">"LMP or EDD"</string>
     <string name="DatingBy">"Dating By:"</string>
+
+    <!-- More Apps Screen Texts -->
+    <string name="moreAppsScreen_title">
+        "More apps for clinicians
+            by Joshua Steinberg MD"
+    </string>
+    <string name="moreAppsScreen_text">"I keep a list of apps* written by anyone (mostly others) which I recommend for clinicians, nurses, residents, and students serving many fields of medicine, especially my home of full-spectrum family medicine. A copy is always online here."</string>
+    <string name="moreAppsScreen_button">"More Apps List"</string>
+    <string name="moreAppsScreen_text2">"* I have no financial relationship or financial benefit from any of these apps, even my own."</string>
 </resources>
