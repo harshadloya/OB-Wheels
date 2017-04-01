@@ -11,6 +11,6 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="References Screen" />
+        android:text="@string/ref_screen_text" />
 
 </LinearLayout>

@@ -118,11 +118,13 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView10"
-            android:layout_marginLeft="185dp"
-            android:layout_marginStart="185dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginStart="177dp"
             android:layout_toEndOf="@+id/textView10"
             android:layout_toRightOf="@+id/textView10"
-            android:ems="10"
+            android:ems="2"
+            android:text="0"
+            android:textAlignment="center"
             android:inputType="number" />
 
         <TextView
@@ -130,8 +132,8 @@
             android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView10"
-            android:layout_marginLeft="2dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"
             android:layout_toEndOf="@+id/editText3"
             android:layout_toRightOf="@+id/editText3"
             android:text="@string/weeks" />
@@ -141,20 +143,22 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView10"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
             android:layout_toEndOf="@+id/textView11"
             android:layout_toRightOf="@+id/textView11"
-            android:ems="10"
+            android:ems="2"
+            android:text="0"
+            android:textAlignment="center"
             android:inputType="number" />
 
         <TextView
             android:id="@+id/textView12"
-            android:layout_width="10dp"
+            android:layout_width="7dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView10"
-            android:layout_marginLeft="2dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginStart="1dp"
             android:layout_toEndOf="@+id/editText4"
             android:layout_toRightOf="@+id/editText4"
             android:text="@string/days" />
