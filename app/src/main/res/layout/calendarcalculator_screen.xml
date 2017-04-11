@@ -83,7 +83,7 @@
             android:layout_toRightOf="@+id/textView4"
             android:editable="false"
             android:ems="10"
-            android:hint="@string/EditTextHint"
+            android:hint="@string/LMPEditTextHint"
             android:textAlignment="center" />
 
         <EditText
@@ -96,7 +96,7 @@
             android:layout_toEndOf="@+id/editText1"
             android:layout_toRightOf="@+id/editText1"
             android:ems="10"
-            android:hint="@string/EditTextHint"
+            android:hint="@string/SonoEditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -125,7 +125,8 @@
             android:ems="2"
             android:text="0"
             android:textAlignment="center"
-            android:inputType="number" />
+            android:inputType="number"
+            android:imeOptions="actionDone" />
 
         <TextView
             android:id="@+id/textView11"
@@ -150,7 +151,8 @@
             android:ems="2"
             android:text="0"
             android:textAlignment="center"
-            android:inputType="number" />
+            android:inputType="number"
+            android:imeOptions="actionDone" />
 
         <TextView
             android:id="@+id/textView12"
@@ -184,7 +186,7 @@
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
-            android:hint="@string/EditTextHint"
+            android:hint="@string/EDDEditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -198,7 +200,6 @@
             android:layout_toEndOf="@+id/editText5"
             android:layout_toRightOf="@+id/editText5"
             android:ems="10"
-            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -223,7 +224,6 @@
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
             android:ems="10"
-            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 
@@ -237,7 +237,6 @@
             android:layout_toEndOf="@+id/editText7"
             android:layout_toRightOf="@+id/editText7"
             android:ems="10"
-            android:hint="@string/EditTextHint"
             android:editable="false"
             android:textAlignment="center" />
 

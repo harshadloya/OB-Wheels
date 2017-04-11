@@ -95,8 +95,9 @@ public class CalendarCalculatorScreen extends Fragment
         editText7.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
         editText8.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
 
-        cs3 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega);
-        cs4 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega);
+        //Update EDD if Report value entered (if Sono value not given default current system date will be taken)
+        cs3 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega, editText2);
+        cs4 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega, editText2);
 
         return view;
     }
@@ -112,9 +113,9 @@ public class CalendarCalculatorScreen extends Fragment
                 editText = (EditText) child;
 
                 int currId = editText.getId();
-                if((currId == R.id.editText3) || (currId == R.id.editText4))
+                if((currId == R.id.editText3) || (currId == R.id.editText4) || (currId == R.id.editText6))
                 {
-                    //Do nothing - Use default system keypad
+                    //Do nothing - Use default system keypad if editable
                 }
                 else
                 {
@@ -155,22 +156,16 @@ public class CalendarCalculatorScreen extends Fragment
                     cs1 = new CalculationsForCalendarScreen(editText1, editText5, editText7, lmpega);
                 }
 
-                //Update EDD if Sono value entered
+                //Update EDD if Sono Date entered (Report values default initialized to 0w0d)
                 else if(v.getId() == editText2.getId())
                 {
-                    cs2 = new CalculationsForCalendarScreen(editText2, editText6, editText8, sonoega);
+                    cs2 = new CalculationsForCalendarScreen(editText2, editText4, editText6, editText8, sonoega, editText3);
                 }
 
                 //Update LMP if EDD value entered
-                else if(v.getId() == editText5.getId()) {
-//                    cs5 = new CalculationsForCalendarScreen(editText5, editText1);
-                }
-
-                //Update Sono if EDD value entered
-                else if(v.getId() == editText6.getId())
-                {
-  //                  cs6 = new CalculationsForCalendarScreen(editText6, editText2);
-                }
+                //else if(v.getId() == editText5.getId()) {
+                //  cs5 = new CalculationsForCalendarScreen(editText5, editText1);
+                //}
 
                 //Update LMP EGA if EGA as of value entered
                 else if(v.getId() == editText7.getId())
