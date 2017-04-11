@@ -22,6 +22,7 @@ public class CalculationsForCalendarScreen
     private EditText toUpdateEditText;
     private EditText alsoToConsiderEditText;
     private EditText egaAsOfEditText;
+    private EditText initialDateEditText;
     private TextView egaTextView;
     private Calendar cal;
 
@@ -49,34 +50,41 @@ public class CalculationsForCalendarScreen
         egaAsOfEditText = (EditText) egaAsOfView;
         egaTextView = (TextView) egaView;
 
-        if(editedEditText.getId() == R.id.editText1 || editedEditText.getId() == R.id.editText2)
+        if(editedEditText.getId() == R.id.editText1)
         {
-            editedEditText.addTextChangedListener(EDDCalcFromLMPorSono);
+            editedEditText.addTextChangedListener(EDDCalcFromLMP);
         }
-        else if(editedEditText.getId() == R.id.editText5 || editedEditText.getId() == R.id.editText6)
-        {
+        //else if(editedEditText.getId() == R.id.editText5)
+        //{
             //  Commenting below because its causing infinite loop
             // need to find a new way to handle the opposite case of above (if required)
             // editedEditText.addTextChangedListener(LMPorSonoCalcFromEDD);
-        }
+        //}
     }
 
-    public CalculationsForCalendarScreen(View editedView, View alsoToConsiderView, View toBeUpdatedView, View egaAsOfView, View egaView)
+    public CalculationsForCalendarScreen(View editedView, View alsoToConsiderView, View toBeUpdatedView, View egaAsOfView, View egaView, View initialDateView)
     {
         editedEditText = (EditText) editedView;
         alsoToConsiderEditText = (EditText) alsoToConsiderView;
         toUpdateEditText = (EditText) toBeUpdatedView;
         egaAsOfEditText = (EditText) egaAsOfView;
         egaTextView = (TextView) egaView;
+        initialDateEditText = (EditText) initialDateView;
 
         if(editedEditText.getId() == R.id.editText3 || editedEditText.getId() == R.id.editText4)
         {
             editedEditText.addTextChangedListener(sonoEGAUpdated);
         }
+        else if(editedEditText.getId() == R.id.editText2)
+        {
+            editedEditText = (EditText) initialDateView;
+            initialDateEditText = (EditText) editedView;
+            initialDateEditText.addTextChangedListener(sonoEGAUpdated);
+        }
     }
 
 
-    private TextWatcher EDDCalcFromLMPorSono = new TextWatcher() {
+    private TextWatcher EDDCalcFromLMP = new TextWatcher() {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -207,12 +215,24 @@ public class CalculationsForCalendarScreen
                 else
                     dayOrWeekCount = 0;
 
+                String temp1 = initialDateEditText.getText().toString();
                 String temp2 = egaAsOfEditText.getText().toString();
-
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
                 Date sonoDate = null;
                 Date egaDate = null;
+
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+                if (!temp1.equals(""))
+                {
+                    sonoDate = simpleDateFormat.parse(temp1);
+                    cal.setTime(sonoDate);
+                }
+                else
+                {
+                    sonoDate = simpleDateFormat.parse(simpleDateFormat.format(cal.getTime()));
+                    cal.setTime(sonoDate);
+                }
 
                 if (editedEditText.getId() == R.id.editText3)
                 {

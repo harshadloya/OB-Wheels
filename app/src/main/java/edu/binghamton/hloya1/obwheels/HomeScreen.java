@@ -68,21 +68,4 @@ public class HomeScreen extends Fragment
 
         return view;
     }
-/*
-Not Working Yet
-    public void openNextScreen(View view)
-    {
-        button = (Button) view.findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                EDDSettingDetailsScreen eddSettingDetailsScreen = new EDDSettingDetailsScreen();
-                getFragmentManager().beginTransaction().replace(R.id.content, eddSettingDetailsScreen).commit();
-            }
-        });
-
-    }
-
-*/
 }

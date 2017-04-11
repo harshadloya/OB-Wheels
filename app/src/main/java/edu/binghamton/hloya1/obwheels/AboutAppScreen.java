@@ -21,14 +21,11 @@ public class AboutAppScreen extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-
         View view = inflater.inflate(R.layout.aboutapp_screen, container, false);
 
         mTextMessage = (TextView) view.findViewById(R.id.message);
-        mTextMessage.setText(R.string.aboutapp_text);
         mTextMessage.setMovementMethod(new ScrollingMovementMethod());
 
         return view;
-
     }
 }

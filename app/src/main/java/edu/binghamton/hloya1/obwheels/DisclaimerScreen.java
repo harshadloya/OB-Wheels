@@ -25,7 +25,6 @@ public class DisclaimerScreen extends Fragment
         View view = inflater.inflate(R.layout.disclaimer_screen, container, false);
 
         mTextMessage = (TextView) view.findViewById(R.id.message);
-        mTextMessage.setText(R.string.disclaimer_text);
         mTextMessage.setMovementMethod(new ScrollingMovementMethod());
 
         return view;
