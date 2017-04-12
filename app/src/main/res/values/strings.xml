@@ -101,5 +101,5 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
     <string name="moreAppsScreen_text2">"* I have no financial relationship or financial benefit from any of these apps, even my own."</string>
 
     <!-- OB Wheel Screen Texts -->
-    <string name="obWheelScreen_title">"Traditional OB Wheel Screen"</string>
+    <string name="obWheelScreen_title">"Traditional OB Wheel"</string>
 </resources>
