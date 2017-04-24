@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/eddSettingDetailsScreen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/data"
@@ -17,27 +16,48 @@
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="24dp"
         android:text="@string/obWheelScreen_title"
-        android:textSize="20sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/obWheel_outer"
+    <Switch
+        android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleX="0.9"
-        android:scaleY="0.9"
-        app:srcCompat="@drawable/outer_orange_cropped"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignEnd="@+id/data"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/data"
+        android:text="@string/obWheelScreen_switchText" />
 
-    <ImageView
-        android:id="@+id/obWheel_inner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="0.7"
-        android:scaleY="0.7"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/inner_trial_circular_pic" />
+    <!-- <edu.binghamton.hloya1.obwheels.CustomImageView
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:id="@+id/viewForImage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/activity_horizontal_margin"
+         android:layout_marginRight="@dimen/activity_horizontal_margin"
+         android:layout_below="@id/data"
+         android:layout_above="@id/switch1"
+         />
+
+     <ImageView
+         android:id="@+id/obWheel_outer"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:scaleX="0.9"
+         android:scaleY="0.9"
+         app:srcCompat="@drawable/outer_orange_cropped"
+         android:layout_centerVertical="true"
+         android:layout_centerHorizontal="true" />
+
+     <ImageView
+         android:id="@+id/obWheel_inner"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:scaleX="0.7"
+         android:scaleY="0.7"
+         android:layout_centerHorizontal="true"
+         android:layout_centerVertical="true"
+         app:srcCompat="@drawable/inner_trial_circular_pic" />
+         -->
 
 </RelativeLayout>
