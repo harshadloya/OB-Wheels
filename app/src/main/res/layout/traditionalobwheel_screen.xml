@@ -22,23 +22,15 @@
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignEnd="@+id/data"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/data"
+        android:switchMinWidth="50dp"
+        android:switchPadding="10dp"
         android:text="@string/obWheelScreen_switchText" />
 
-    <!-- <edu.binghamton.hloya1.obwheels.CustomImageView
-         xmlns:android="http://schemas.android.com/apk/res/android"
-         android:id="@+id/viewForImage"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-         android:layout_marginRight="@dimen/activity_horizontal_margin"
-         android:layout_below="@id/data"
-         android:layout_above="@id/switch1"
-         />
-
+    <!-- Making the below programmatically
      <ImageView
          android:id="@+id/obWheel_outer"
          android:layout_width="wrap_content"
