@@ -102,4 +102,5 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
 
     <!-- OB Wheel Screen Texts -->
     <string name="obWheelScreen_title">"Traditional OB Wheel"</string>
+    <string name="obWheelScreen_switchText">"Zoom"</string>
 </resources>
