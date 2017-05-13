@@ -25,23 +25,7 @@ public class CalculationsForCalendarScreen
     private EditText initialDateEditText;
     private TextView egaTextView;
     private Calendar cal;
-    private TextWatcher EDDCalcFromLMP = new TextWatcher() {
 
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-        }
-
-        @Override
-        public void afterTextChanged(Editable s)
-        {
-            updateTextView();
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-    };
     private TextWatcher egaLMPorSonoUpdated = new TextWatcher() {
 
         @Override
@@ -93,18 +77,6 @@ public class CalculationsForCalendarScreen
 
         if (egaAsOfEditText.getId() == R.id.editText7 || egaAsOfEditText.getId() == R.id.editText8) {
             egaAsOfEditText.addTextChangedListener(egaLMPorSonoUpdated);
-        }
-    }
-
-
-    public CalculationsForCalendarScreen(View editedView, View toBeUpdatedView, View egaAsOfView, View egaView) {
-        editedEditText = (EditText) editedView;
-        toUpdateEditText = (EditText) toBeUpdatedView;
-        egaAsOfEditText = (EditText) egaAsOfView;
-        egaTextView = (TextView) egaView;
-
-        if (editedEditText.getId() == R.id.editText1 || editedEditText.getId() == R.id.editText5) {
-            editedEditText.addTextChangedListener(EDDCalcFromLMP);
         }
     }
 

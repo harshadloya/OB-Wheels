@@ -7,6 +7,7 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,21 +20,25 @@ import java.util.Date;
 
 public class DateDialog extends DialogFragment implements DatePickerDialog.OnDateSetListener
 {
-    EditText editText;
-    EditText editText2;
+    EditText editedEditText;
+    EditText toUpdateEditText;
+    EditText egaAsOfEditText;
+    TextView lmpegaTextView;
+
     public DateDialog()
     {
-
     }
 
     public DateDialog(View view)
     {
-        editText = (EditText) view;
+        editedEditText = (EditText) view;
     }
 
-    public DateDialog(View view1, View view2) {
-        editText = (EditText) view1;
-        editText2 = (EditText) view2;
+    public DateDialog(View editedView, View toUpdateView, View egaAsOfView, View lmpegaView) {
+        editedEditText = (EditText) editedView;
+        toUpdateEditText = (EditText) toUpdateView;
+        egaAsOfEditText = (EditText) egaAsOfView;
+        lmpegaTextView = (TextView) lmpegaView;
     }
 
     public Dialog onCreateDialog(Bundle saveInstanceState)
@@ -46,7 +51,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), this, year, month, day);
 
-        if(editText.getId() == R.id.editText1 || editText.getId() == R.id.editText2)
+        if (editedEditText.getId() == R.id.editText1 || editedEditText.getId() == R.id.editText2)
             datePickerDialog.getDatePicker().setMaxDate(calendar.getTimeInMillis());
 
         return datePickerDialog;
@@ -56,7 +61,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
     {
         try {
             String date = String.format("%02d", (month + 1)) + "/" + String.format("%02d", day) + "/" + year;
-            editText.setText(date);
+            editedEditText.setText(date);
 
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
@@ -65,22 +70,64 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
             Date inputDate = null;
 
 
-            if (editText.getId() == R.id.editText1) {
+            if (editedEditText.getId() == R.id.editText1) {
                 inputDate = simpleDateFormat.parse(date);
 
                 calendar.setTime(inputDate);
                 calendar.add(Calendar.DATE, 280);
-                editText2.setText(simpleDateFormat.format(calendar.getTime()));
-            } else if (editText.getId() == R.id.editText5) {
+                toUpdateEditText.setText(simpleDateFormat.format(calendar.getTime()));
+                updateWeekDayCount();
+            } else if (editedEditText.getId() == R.id.editText5) {
                 inputDate = simpleDateFormat.parse(date);
 
                 calendar.setTime(inputDate);
                 calendar.add(Calendar.DATE, -280);
-                editText2.setText(simpleDateFormat.format(calendar.getTime()));
+                toUpdateEditText.setText(simpleDateFormat.format(calendar.getTime()));
+                updateWeekDayCount();
             }
+
 
         } catch (ParseException e) {
             //e.printStackTrace();
         }
+    }
+
+    public void updateWeekDayCount() {
+        try {
+            CalculationsForCalendarScreen cs = new CalculationsForCalendarScreen();
+            String temp1 = editedEditText.getText().toString();
+            String temp2 = egaAsOfEditText.getText().toString();
+
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+            Date lmpDate = null;
+            Date egaDate = null;
+
+            if (!temp1.equals("")) {
+                lmpDate = simpleDateFormat.parse(temp1);
+            }
+
+            if (!temp2.equals("")) {
+                egaDate = simpleDateFormat.parse(temp2);
+            }
+
+            if (lmpDate != null && egaDate != null) {
+                int dayCount = (int) cs.getDaysBetweenDates(lmpDate, egaDate);
+                int weekCount = dayCount / 7;
+                dayCount = dayCount % 7;
+
+                lmpegaTextView.setText(weekCount + "Weeks, " + dayCount + "Days");
+            } else {
+                if (editedEditText.getId() == R.id.editText1) {
+                    lmpegaTextView.setText(R.string.LMP_EGA);
+                } else if (editedEditText.getId() == R.id.editText2) {
+                    lmpegaTextView.setText(R.string.SONO_EGA);
+                }
+            }
+
+        } catch (ParseException e) {
+            //Error
+        }
+
     }
 }
