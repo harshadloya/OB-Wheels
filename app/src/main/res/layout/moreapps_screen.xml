@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlueColor"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/screenname"
@@ -11,20 +13,20 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:textSize="20sp"
+        android:text="@string/moreAppsScreen_title"
         android:textAlignment="center"
-        android:text="@string/moreAppsScreen_title" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:textSize="16sp"
-        android:text="@string/moreAppsScreen_text"
-        android:layout_below="@+id/screenname"
         android:layout_alignLeft="@+id/screenname"
-        android:layout_alignStart="@+id/screenname" />
+        android:layout_alignStart="@+id/screenname"
+        android:layout_below="@+id/screenname"
+        android:layout_marginTop="12dp"
+        android:text="@string/moreAppsScreen_text"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/moreAppsButton"
@@ -38,11 +40,11 @@
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/moreAppsScreen_text2"
         android:layout_alignLeft="@+id/text1"
         android:layout_alignStart="@+id/text1"
         android:layout_below="@+id/moreAppsButton"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="44dp"
+        android:text="@string/moreAppsScreen_text2" />
 
 
 </RelativeLayout>

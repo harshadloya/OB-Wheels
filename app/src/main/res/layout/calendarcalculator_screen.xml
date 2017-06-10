@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/calendarCalculatorScreenLinear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBlueColor"
     android:orientation="vertical">
 
     <TextView
@@ -14,8 +14,8 @@
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:textSize="20sp"
-        android:text="@string/ScreenName" />
+        android:text="@string/ScreenName"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:id="@+id/calendarCalculatorScreenRelative"
@@ -40,8 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView1"
-            android:layout_marginLeft="35dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_toEndOf="@+id/textView1"
             android:layout_toRightOf="@+id/textView1"
             android:text="@string/LMPorEDD"
@@ -52,8 +52,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView1"
-            android:layout_marginLeft="75dp"
-            android:layout_marginStart="75dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
             android:layout_toEndOf="@+id/textView2"
             android:layout_toRightOf="@+id/textView2"
             android:text="@string/Sono"
@@ -72,32 +72,28 @@
             android:text="@string/DateOf"
             android:textSize="16sp" />
 
-        <EditText
+        <Button
             android:id="@+id/editText1"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView4"
-            android:layout_marginLeft="35dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_toEndOf="@+id/textView4"
             android:layout_toRightOf="@+id/textView4"
-            android:editable="false"
-            android:ems="10"
-            android:hint="@string/LMPEditTextHint"
+            android:text="@string/LMPEditTextHint"
             android:textAlignment="center" />
 
-        <EditText
+        <Button
             android:id="@+id/editText2"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView4"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
             android:layout_toEndOf="@+id/editText1"
             android:layout_toRightOf="@+id/editText1"
-            android:ems="10"
-            android:hint="@string/SonoEditTextHint"
-            android:editable="false"
+            android:text="@string/SonoEditTextHint"
             android:textAlignment="center" />
 
         <TextView
@@ -123,10 +119,10 @@
             android:layout_toEndOf="@+id/textView10"
             android:layout_toRightOf="@+id/textView10"
             android:ems="2"
-            android:text="0"
-            android:textAlignment="center"
+            android:imeOptions="actionDone"
             android:inputType="number"
-            android:imeOptions="actionDone" />
+            android:text="0"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView11"
@@ -149,10 +145,10 @@
             android:layout_toEndOf="@+id/textView11"
             android:layout_toRightOf="@+id/textView11"
             android:ems="2"
-            android:text="0"
-            android:textAlignment="center"
+            android:imeOptions="actionDone"
             android:inputType="number"
-            android:imeOptions="actionDone" />
+            android:text="0"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView12"
@@ -178,19 +174,17 @@
             android:text="@string/EDD"
             android:textSize="16sp" />
 
-        <EditText
+        <Button
             android:id="@+id/editText5"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView13"
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
-            android:ems="10"
-            android:hint="@string/EDDEditTextHint"
-            android:editable="false"
+            android:text="@string/EDDEditTextHint"
             android:textAlignment="center" />
 
-        <EditText
+        <Button
             android:id="@+id/editText6"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
@@ -199,8 +193,6 @@
             android:layout_marginStart="20dp"
             android:layout_toEndOf="@+id/editText5"
             android:layout_toRightOf="@+id/editText5"
-            android:ems="10"
-            android:editable="false"
             android:textAlignment="center" />
 
         <TextView
@@ -216,18 +208,17 @@
             android:text="@string/EgaAsOf"
             android:textSize="16sp" />
 
-        <EditText
+        <Button
             android:id="@+id/editText7"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView14"
             android:layout_alignLeft="@+id/editText1"
             android:layout_alignStart="@+id/editText1"
-            android:ems="10"
-            android:editable="false"
+            android:text="@string/SelectDate"
             android:textAlignment="center" />
 
-        <EditText
+        <Button
             android:id="@+id/editText8"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
@@ -236,8 +227,7 @@
             android:layout_marginStart="20dp"
             android:layout_toEndOf="@+id/editText7"
             android:layout_toRightOf="@+id/editText7"
-            android:ems="10"
-            android:editable="false"
+            android:text="@string/SelectDate"
             android:textAlignment="center" />
 
         <TextView
