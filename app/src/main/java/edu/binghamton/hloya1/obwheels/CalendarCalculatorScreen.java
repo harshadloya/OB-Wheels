@@ -28,53 +28,56 @@ public class CalendarCalculatorScreen extends Fragment
     CalculationsForCalendarScreen cs3;
     CalculationsForCalendarScreen cs4;
     CalculationsForCalendarScreen cs5;
-    private EditText editText;
-    private EditText editText1;
-    private EditText editText2;
+    private Button textButton;
+    private Button editText1;
+    private Button editText2;
     private EditText editText3;
     private EditText editText4;
-    private EditText editText5;
-    private EditText editText6;
-    private EditText editText7;
-    private EditText editText8;
+    private Button editText5;
+    private Button editText6;
+    private Button editText7;
+    private Button editText8;
     private TextView lmpega;
     private TextView sonoega;
-    private Button button;
-    //private int year, month, day;
-    private View.OnFocusChangeListener mOnFocusChangeListener = new View.OnFocusChangeListener() {
+    public View.OnClickListener mOnClickListener = new View.OnClickListener() {
+
         @Override
-        public void onFocusChange(View v, boolean hasFocus) {
+        public void onClick(View v) {
+            DateDialog dialog;
+            if (v.getId() == R.id.editText1) {
+                dialog = new DateDialog(v, editText5, editText7, lmpega);
+            } else if (v.getId() == R.id.editText2) {
+                dialog = new DateDialog(v, editText3, editText4, editText6, editText8, sonoega);
+            } else if (v.getId() == R.id.editText5) {
+                dialog = new DateDialog(v, editText1, editText7, lmpega);
+            } else if (v.getId() == R.id.editText7) {
+                dialog = new DateDialog(v, editText5, editText1, lmpega);
+            } else if (v.getId() == R.id.editText8) {
+                dialog = new DateDialog(v, editText3, editText4, editText6, editText2, sonoega);
+            } else {
+                dialog = new DateDialog(v);
+            }
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            dialog.show(ft, "DatePicker");
 
-            if (hasFocus) {
+            //Update EDD if Sono Date entered (Report values default initialized to 0w0d)
+            if (v.getId() == editText2.getId()) {
+                //cs1 = new CalculationsForCalendarScreen(editText2, editText4, editText6, editText8, sonoega, editText3, null);
+            }
 
-                DateDialog dialog;
-                if (v.getId() == R.id.editText1) {
-                    dialog = new DateDialog(v, editText5, editText7, lmpega);
-                } else if (v.getId() == R.id.editText5) {
-                    dialog = new DateDialog(v, editText1, editText7, lmpega);
-                } else {
-                    dialog = new DateDialog(v);
-                }
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                dialog.show(ft, "DatePicker");
+            //Update LMP EGA if EGA as of value entered
+            else if (v.getId() == editText7.getId()) {
+                //cs4 = new CalculationsForCalendarScreen(editText1, editText7, lmpega);
+            }
 
-                //Update EDD if Sono Date entered (Report values default initialized to 0w0d)
-                if (v.getId() == editText2.getId()) {
-                    cs1 = new CalculationsForCalendarScreen(editText2, editText4, editText6, editText8, sonoega, editText3);
-                }
-
-                //Update LMP EGA if EGA as of value entered
-                else if (v.getId() == editText7.getId()) {
-                    cs4 = new CalculationsForCalendarScreen(editText1, editText7, lmpega);
-                }
-
-                //Update Sono EGA if EGA as of value entered
-                else if (v.getId() == editText8.getId()) {
-                    cs5 = new CalculationsForCalendarScreen(editText2, editText8, sonoega);
-                }
+            //Update Sono EGA if EGA as of value entered
+            else if (v.getId() == editText8.getId()) {
+                //cs5 = new CalculationsForCalendarScreen(editText8, editText4, editText6, editText3, sonoega, editText2, null);
             }
         }
     };
+    //private int year, month, day;
+    private Button button;
 
     @Nullable
     @Override
@@ -100,9 +103,9 @@ public class CalendarCalculatorScreen extends Fragment
         });
 
 
-        editText1 = (EditText) view.findViewById(R.id.editText1);
+        editText1 = (Button) view.findViewById(R.id.editText1);
 
-        editText2 = (EditText) view.findViewById(R.id.editText2);
+        editText2 = (Button) view.findViewById(R.id.editText2);
 
         editText3 = (EditText) view.findViewById(R.id.editText3);
         editText3.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "40")});
@@ -110,13 +113,13 @@ public class CalendarCalculatorScreen extends Fragment
         editText4 = (EditText) view.findViewById(R.id.editText4);
         editText4.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "6")});
 
-        editText5 = (EditText) view.findViewById(R.id.editText5);
+        editText5 = (Button) view.findViewById(R.id.editText5);
 
-        editText6 = (EditText) view.findViewById(R.id.editText6);
+        editText6 = (Button) view.findViewById(R.id.editText6);
 
-        editText7 = (EditText) view.findViewById(R.id.editText7);
+        editText7 = (Button) view.findViewById(R.id.editText7);
 
-        editText8 = (EditText) view.findViewById(R.id.editText8);
+        editText8 = (Button) view.findViewById(R.id.editText8);
 
         lmpega = (TextView) view.findViewById(R.id.lmpega);
         sonoega = (TextView) view.findViewById(R.id.sonoega);
@@ -128,8 +131,8 @@ public class CalendarCalculatorScreen extends Fragment
         editText8.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
 
         //Update EDD if Report value entered (if Sono value not given default current system date will be taken)
-        cs2 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega, editText2);
-        cs3 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega, editText2);
+        //cs2 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega, editText2);
+        //cs3 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega, editText2);
 
         return view;
     }
@@ -140,18 +143,19 @@ public class CalendarCalculatorScreen extends Fragment
 
         for (int i = 0; i < count; i++) {
             View child = container.getChildAt(i);
-            if (child instanceof EditText)
+            if (child instanceof Button)
             {
-                editText = (EditText) child;
+                textButton = (Button) child;
 
-                int currId = editText.getId();
+                int currId = textButton.getId();
                 if((currId == R.id.editText3) || (currId == R.id.editText4) || (currId == R.id.editText6))
                 {
                     //Do nothing - Use default system keypad if editable
                 }
                 else
                 {
-                    editText.setOnFocusChangeListener(mOnFocusChangeListener);
+                    //editText.setOnFocusChangeListener(mOnFocusChangeListener);
+                    textButton.setOnClickListener(mOnClickListener);
                 }
             }
             else if (child instanceof ViewGroup)

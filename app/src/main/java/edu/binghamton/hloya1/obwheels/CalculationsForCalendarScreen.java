@@ -3,6 +3,7 @@ package edu.binghamton.hloya1.obwheels;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,32 +19,14 @@ import java.util.concurrent.TimeUnit;
 
 public class CalculationsForCalendarScreen
 {
-    private EditText editedEditText;
-    private EditText toUpdateEditText;
+    private Button editedEditText;
+    private Button toUpdateEditText;
     private EditText alsoToConsiderEditText;
-    private EditText egaAsOfEditText;
-    private EditText initialDateEditText;
+    private Button egaAsOfEditText;
+    private Button initialDateEditText;
     private TextView egaTextView;
     private Calendar cal;
 
-    private TextWatcher egaLMPorSonoUpdated = new TextWatcher() {
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count)
-        {
-            updateTextView();
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-    };
     private TextWatcher sonoEGAUpdated = new TextWatcher() {
 
         @Override
@@ -67,34 +50,19 @@ public class CalculationsForCalendarScreen
     public CalculationsForCalendarScreen() {
     }
 
-
-    public CalculationsForCalendarScreen(View editedView, View egaAsOfView, View egaView) {
-        toUpdateEditText = null;
-
-        editedEditText = (EditText) editedView;
-        egaAsOfEditText = (EditText) egaAsOfView;
-        egaTextView = (TextView) egaView;
-
-        if (egaAsOfEditText.getId() == R.id.editText7 || egaAsOfEditText.getId() == R.id.editText8) {
-            egaAsOfEditText.addTextChangedListener(egaLMPorSonoUpdated);
-        }
-    }
-
     public CalculationsForCalendarScreen(View editedView, View alsoToConsiderView, View toBeUpdatedView, View egaAsOfView, View egaView, View initialDateView) {
+        EditText editedEditText;
         editedEditText = (EditText) editedView;
         alsoToConsiderEditText = (EditText) alsoToConsiderView;
-        toUpdateEditText = (EditText) toBeUpdatedView;
-        egaAsOfEditText = (EditText) egaAsOfView;
+        toUpdateEditText = (Button) toBeUpdatedView;
+        egaAsOfEditText = (Button) egaAsOfView;
         egaTextView = (TextView) egaView;
-        initialDateEditText = (EditText) initialDateView;
+        initialDateEditText = (Button) initialDateView;
 
         if (editedEditText.getId() == R.id.editText3 || editedEditText.getId() == R.id.editText4) {
             editedEditText.addTextChangedListener(sonoEGAUpdated);
-        } else if (editedEditText.getId() == R.id.editText2) {
-            editedEditText = (EditText) initialDateView;
-            initialDateEditText = (EditText) editedView;
-            initialDateEditText.addTextChangedListener(sonoEGAUpdated);
         }
+
     }
 
     public void updateTextView()
@@ -164,7 +132,7 @@ public class CalculationsForCalendarScreen
                     int weekCount = dayCount / 7;
                     dayCount = dayCount % 7;
 
-                    egaTextView.setText(weekCount + "Weeks, " + dayCount + "Days");
+                    egaTextView.setText(weekCount + " Weeks, " + dayCount + " Days");
 
                     cal.add(Calendar.DATE, 280);
                     toUpdateEditText.setText(simpleDateFormat.format(cal.getTime()));

@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">OBWheels</string>
-    <!--
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_aboutus">About Us</string>
-    -->
 
     <string name="title_home">OB Wheels</string>
     <string name="title_disclaimer">Disclaimer</string>
@@ -19,7 +13,7 @@
 
     <!-- About App Screen Texts -->
     <string name="aboutapp_screen_heading">"Development of App"</string>
-    <string name="aboutapp_text">"Written to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton, Class of 2017\n\tharshadloya@gmail.com\n\n\nFeedback:\n\tjds.pocapps@gmail.com\n\tPlatform: Android 4.0.3 and later\n\tVersion: 1.0\n\tCopyright: April, 2017"</string>
+    <string name="aboutapp_text">"Written to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Prof. Patrick Madden,\n\tSUNY - Binghamton\n\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton, Class of 2017\n\tharshadloya@gmail.com\n\n\nFeedback:\n\tjds.pocapps@gmail.com\n\tPlatform: Android 4.0.3 and later\n\tVersion: 1.0\n\tCopyright: April, 2017"</string>
 
     <!-- References Screen Texts -->
     <string name="ref_screen_text">"References Screen"</string>
@@ -93,6 +87,7 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
     <string name="Sono">"Sono"</string>
     <string name="LMPorEDD">"LMP or EDD"</string>
     <string name="DatingBy">"Dating By:"</string>
+    <string name="SelectDate">"Click to Select Date"</string>
 
     <!-- More Apps Screen Texts -->
     <string name="moreAppsScreen_title">"More apps for clinicians\nby Joshua Steinberg MD"</string>
@@ -102,5 +97,10 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
 
     <!-- OB Wheel Screen Texts -->
     <string name="obWheelScreen_title">"Traditional OB Wheel"</string>
-    <string name="obWheelScreen_switchText">"Zoom"</string>
+    <string name="obWheelScreen_switchText1">"Image Rotation\nOnly"</string>
+    <string name="obWheelScreen_switchText2">"Image Zoom\nOnly"</string>
+    <string name="obWheelScreen_instructions1">"Pinch to Resize\nentire wheel"</string>
+    <string name="obWheelScreen_instructions2">"Hold and Drag\nto move the wheel"</string>
+    <string name="obWheelScreen_instructions3">"2-finger twist\ninner wheel to rotate"</string>
+    <string name="obWheelScreen_instructions4">"2-finger twist\nouter wheel\nto rotate"</string>
 </resources>
