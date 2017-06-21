@@ -5,12 +5,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
  * Created by hloya on 3/29/2017.
@@ -19,6 +17,7 @@ import android.widget.TextView;
 public class MoreAppsScreen extends Fragment
 {
     private Button button;
+    private Button button2;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
@@ -29,9 +28,21 @@ public class MoreAppsScreen extends Fragment
             @Override
             public void onClick(View v)
             {
-                Uri uri = Uri.parse("https://resourcelibrary.stfm.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=72a92740-16aa-6499-f3b1-ae4dc8c2e119&forceDialog=1");
+                Uri uri = Uri.parse("https://media.wix.com/ugd/cd92db_e325a0c13e944ff3bca79a7312087629.doc?dn=Apps%20list%20for%20iPhone.doc");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+            }
+        });
+
+        button2 = (Button) view.findViewById(R.id.otherPlayStoreApps);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=pub:Joshua+Steinberg+MD")));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/developer?id=Joshua+Steinberg+MD")));
+                }
             }
         });
 
