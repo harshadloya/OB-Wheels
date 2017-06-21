@@ -100,15 +100,22 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
                 editedEditText = tempButton;
 
                 updateWeekDayCount();
-            } else if (editedEditText.getId() == R.id.editText2) {
+            }
+            //Update EDD if Sono Date entered (Report values default initialized to 0w0d)
+            else if (editedEditText.getId() == R.id.editText2) {
                 updateSonoFields(calendar);
-            } else if (editedEditText.getId() == R.id.editText7) {
+            }
+            //Update LMP EGA if EGA as of value entered
+            else if (editedEditText.getId() == R.id.editText7) {
                 Button tempButton = editedEditText;
                 editedEditText = egaAsOfEditText;
                 egaAsOfEditText = tempButton;
 
                 updateWeekDayCount();
-            } else if (editedEditText.getId() == R.id.editText8) {
+            }
+
+            //Update Sono EGA if EGA as of value entered
+            else if (editedEditText.getId() == R.id.editText8) {
                 Button tempButton = editedEditText;
                 editedEditText = egaAsOfEditText;
                 egaAsOfEditText = tempButton;
