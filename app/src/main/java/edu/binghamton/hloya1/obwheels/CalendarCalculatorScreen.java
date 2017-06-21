@@ -25,9 +25,6 @@ public class CalendarCalculatorScreen extends Fragment
 {
     CalculationsForCalendarScreen cs1;
     CalculationsForCalendarScreen cs2;
-    CalculationsForCalendarScreen cs3;
-    CalculationsForCalendarScreen cs4;
-    CalculationsForCalendarScreen cs5;
     private Button textButton;
     private Button editText1;
     private Button editText2;
@@ -59,24 +56,8 @@ public class CalendarCalculatorScreen extends Fragment
             }
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             dialog.show(ft, "DatePicker");
-
-            //Update EDD if Sono Date entered (Report values default initialized to 0w0d)
-            if (v.getId() == editText2.getId()) {
-                //cs1 = new CalculationsForCalendarScreen(editText2, editText4, editText6, editText8, sonoega, editText3, null);
-            }
-
-            //Update LMP EGA if EGA as of value entered
-            else if (v.getId() == editText7.getId()) {
-                //cs4 = new CalculationsForCalendarScreen(editText1, editText7, lmpega);
-            }
-
-            //Update Sono EGA if EGA as of value entered
-            else if (v.getId() == editText8.getId()) {
-                //cs5 = new CalculationsForCalendarScreen(editText8, editText4, editText6, editText3, sonoega, editText2, null);
-            }
         }
     };
-    //private int year, month, day;
     private Button button;
 
     @Nullable
@@ -131,8 +112,8 @@ public class CalendarCalculatorScreen extends Fragment
         editText8.setText(new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime()));
 
         //Update EDD if Report value entered (if Sono value not given default current system date will be taken)
-        //cs2 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega, editText2);
-        //cs3 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega, editText2);
+        cs1 = new CalculationsForCalendarScreen(editText3, editText4, editText6, editText8, sonoega, editText2);
+        cs2 = new CalculationsForCalendarScreen(editText4, editText3, editText6, editText8, sonoega, editText2);
 
         return view;
     }

@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CalculationsForCalendarScreen
 {
-    private Button editedEditText;
+    private EditText editedEditText;
     private Button toUpdateEditText;
     private EditText alsoToConsiderEditText;
     private Button egaAsOfEditText;
@@ -47,11 +47,12 @@ public class CalculationsForCalendarScreen
         }
     };
 
+
     public CalculationsForCalendarScreen() {
     }
 
     public CalculationsForCalendarScreen(View editedView, View alsoToConsiderView, View toBeUpdatedView, View egaAsOfView, View egaView, View initialDateView) {
-        EditText editedEditText;
+
         editedEditText = (EditText) editedView;
         alsoToConsiderEditText = (EditText) alsoToConsiderView;
         toUpdateEditText = (Button) toBeUpdatedView;
@@ -141,40 +142,6 @@ public class CalculationsForCalendarScreen
                 {
                     egaTextView.setText(R.string.SONO_EGA);
                     toUpdateEditText.setText("");
-                }
-            }
-            else
-            {
-                String temp1 = editedEditText.getText().toString();
-                String temp2 = egaAsOfEditText.getText().toString();
-
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-
-                Date lmpDate = null;
-                Date egaDate = null;
-
-                if (!temp1.equals("")) {
-                    lmpDate = simpleDateFormat.parse(temp1);
-                }
-
-                if (!temp2.equals("")) {
-                    egaDate = simpleDateFormat.parse(temp2);
-                }
-
-                if (lmpDate != null && egaDate != null) {
-                    int dayCount = (int) getDaysBetweenDates(lmpDate, egaDate);
-                    int weekCount = dayCount / 7;
-                    dayCount = dayCount % 7;
-
-                     egaTextView.setText(weekCount + "Weeks, " + dayCount + "Days");
-                }
-                else
-                {
-                    if (editedEditText.getId() == R.id.editText1) {
-                        egaTextView.setText(R.string.LMP_EGA);
-                    } else if (editedEditText.getId() == R.id.editText2) {
-                        egaTextView.setText(R.string.SONO_EGA);
-                    }
                 }
             }
         }
