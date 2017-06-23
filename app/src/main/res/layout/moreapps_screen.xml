@@ -24,16 +24,20 @@
         android:layout_alignLeft="@+id/screenname"
         android:layout_alignStart="@+id/screenname"
         android:layout_below="@+id/screenname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="12dp"
         android:text="@string/moreAppsScreen_text"
         android:textSize="16sp" />
 
     <Button
         android:id="@+id/moreAppsButton"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text1"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="35dp"
         android:text="@string/moreAppsScreen_button" />
 
@@ -44,15 +48,19 @@
         android:layout_alignLeft="@+id/text1"
         android:layout_alignStart="@+id/text1"
         android:layout_below="@+id/moreAppsButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="44dp"
         android:text="@string/moreAppsScreen_text2" />
 
     <Button
         android:id="@+id/otherPlayStoreApps"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text2"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="35dp"
         android:text="@string/moreAppsScreen_button2" />
 
