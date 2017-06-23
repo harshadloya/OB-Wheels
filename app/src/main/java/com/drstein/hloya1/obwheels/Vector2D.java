@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 public class Vector2D {
 

@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -19,8 +19,7 @@ import java.util.Date;
  * Created by hloya on 3/30/2017.
  */
 
-public class DateDialog extends DialogFragment implements DatePickerDialog.OnDateSetListener
-{
+public class DateDialog extends DialogFragment implements DatePickerDialog.OnDateSetListener {
     Button editedEditText;
     Button toUpdateEditText;
     EditText considerEditText;
@@ -28,12 +27,10 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
     Button egaAsOfEditText;
     TextView lmpOrSonoEgaTextView;
 
-    public DateDialog()
-    {
+    public DateDialog() {
     }
 
-    public DateDialog(View view)
-    {
+    public DateDialog(View view) {
         editedEditText = (Button) view;
     }
 
@@ -53,8 +50,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
         lmpOrSonoEgaTextView = (TextView) sonoEgaView;
     }
 
-    public Dialog onCreateDialog(Bundle saveInstanceState)
-    {
+    public Dialog onCreateDialog(Bundle saveInstanceState) {
         final Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
@@ -69,8 +65,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
         return datePickerDialog;
     }
 
-    public void onDateSet(DatePicker view, int year, int month, int day)
-    {
+    public void onDateSet(DatePicker view, int year, int month, int day) {
         try {
             String date = String.format("%02d", (month + 1)) + "/" + String.format("%02d", day) + "/" + year;
             editedEditText.setText(date);

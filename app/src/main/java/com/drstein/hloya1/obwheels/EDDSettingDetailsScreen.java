@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,14 +13,12 @@ import android.widget.TextView;
  * Created by hloya on 3/29/2017.
  */
 
-public class EDDSettingDetailsScreen extends Fragment
-{
+public class EDDSettingDetailsScreen extends Fragment {
     private TextView mTextMessage;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.eddsettingdetails_screen, container, false);
 
         mTextMessage = (TextView) view.findViewById(R.id.data);

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightBlueColor"
     android:orientation="vertical"
-    tools:context="edu.binghamton.hloya1.obwheels.MainScreen">
+    tools:context="com.drstein.hloya1.obwheels.MainScreen">
 
     <FrameLayout
         android:id="@+id/content"

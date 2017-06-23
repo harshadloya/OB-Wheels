@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import org.junit.Test;
 

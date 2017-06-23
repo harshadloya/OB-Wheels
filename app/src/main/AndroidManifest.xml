@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.binghamton.hloya1.obwheels">
+    package="com.drstein.hloya1.obwheels">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainScreen"
+            android:name="com.drstein.hloya1.obwheels.MainScreen"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>

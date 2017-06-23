@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -19,14 +19,12 @@ import android.widget.RelativeLayout;
  * Created by hloya on 3/29/2017.
  */
 
-public class TraditionalObWheelScreen extends Fragment
-{
+public class TraditionalObWheelScreen extends Fragment {
     private RelativeLayout relativeLayout;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.traditionalobwheel_screen, container, false);
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.inner_trial_circular_pic);

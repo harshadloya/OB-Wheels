@@ -1,6 +1,16 @@
 apply plugin: 'com.android.application'
-
 android {
+    signingConfigs {
+        harshadloya {
+            keyAlias 'obwheelskey'
+            keyPassword 'binghamton'
+            storeFile file('E:/College/GameDev-PMadden/PlayStoreKey/obwheelskey.jks')
+            storePassword 'binghamton'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
@@ -18,7 +28,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     dependencies {
         compile fileTree(dir: 'libs', include: ['*.jar'])
         androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -29,4 +38,6 @@ android {
         compile 'com.android.support:support-vector-drawable:25.3.0'
         testCompile 'junit:junit:4.12'
     }
+}
+dependencies {
 }

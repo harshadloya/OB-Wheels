@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,20 +14,18 @@ import android.widget.Button;
  * Created by hloya on 3/29/2017.
  */
 
-public class MoreAppsScreen extends Fragment
-{
+public class MoreAppsScreen extends Fragment {
     private Button button;
     private Button button2;
+
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.moreapps_screen, container, false);
         button = (Button) view.findViewById(R.id.moreAppsButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Uri uri = Uri.parse("https://media.wix.com/ugd/cd92db_e325a0c13e944ff3bca79a7312087629.doc?dn=Apps%20list%20for%20iPhone.doc");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);

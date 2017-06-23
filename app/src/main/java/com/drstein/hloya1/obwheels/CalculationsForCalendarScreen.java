@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,8 +17,7 @@ import java.util.concurrent.TimeUnit;
  * Created by hloya on 3/30/2017.
  */
 
-public class CalculationsForCalendarScreen
-{
+public class CalculationsForCalendarScreen {
     private EditText editedEditText;
     private Button toUpdateEditText;
     private EditText alsoToConsiderEditText;
@@ -34,8 +33,7 @@ public class CalculationsForCalendarScreen
         }
 
         @Override
-        public void afterTextChanged(Editable s)
-        {
+        public void afterTextChanged(Editable s) {
             //cal.setTime(new Date());
             cal = Calendar.getInstance();
             updateTextView();
@@ -66,28 +64,21 @@ public class CalculationsForCalendarScreen
 
     }
 
-    public void updateTextView()
-    {
-        try
-        {
-            if(editedEditText.getId() == R.id.editText3 || editedEditText.getId() == R.id.editText4)
-            {
+    public void updateTextView() {
+        try {
+            if (editedEditText.getId() == R.id.editText3 || editedEditText.getId() == R.id.editText4) {
                 String editText3Data = editedEditText.getText().toString();
                 String editText4Data = alsoToConsiderEditText.getText().toString();
                 int weekOrDayCount;
                 int dayOrWeekCount;
-                if(editText3Data.compareTo("") != 0)
-                {
+                if (editText3Data.compareTo("") != 0) {
                     weekOrDayCount = Integer.parseInt(editText3Data);
-                }
-                else
+                } else
                     weekOrDayCount = 0;
 
-                if(editText4Data.compareTo("") != 0)
-                {
+                if (editText4Data.compareTo("") != 0) {
                     dayOrWeekCount = Integer.parseInt(editText4Data);
-                }
-                else
+                } else
                     dayOrWeekCount = 0;
 
                 String temp1 = initialDateEditText.getText().toString();
@@ -98,37 +89,29 @@ public class CalculationsForCalendarScreen
 
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
-                if (!temp1.equals(""))
-                {
+                if (!temp1.equals("")) {
                     sonoDate = simpleDateFormat.parse(temp1);
                     cal.setTime(sonoDate);
-                }
-                else
-                {
+                } else {
                     sonoDate = simpleDateFormat.parse(simpleDateFormat.format(cal.getTime()));
                     cal.setTime(sonoDate);
                 }
 
-                if (editedEditText.getId() == R.id.editText3)
-                {
+                if (editedEditText.getId() == R.id.editText3) {
                     cal.add(Calendar.WEEK_OF_YEAR, -weekOrDayCount);
                     cal.add(Calendar.DAY_OF_YEAR, -dayOrWeekCount);
-                }
-                else if(editedEditText.getId() == R.id.editText4)
-                {
+                } else if (editedEditText.getId() == R.id.editText4) {
                     cal.add(Calendar.DAY_OF_YEAR, -weekOrDayCount);
                     cal.add(Calendar.WEEK_OF_YEAR, -dayOrWeekCount);
                 }
 
                 sonoDate = simpleDateFormat.parse(simpleDateFormat.format(cal.getTime()));
 
-                if (!temp2.equals(""))
-                {
+                if (!temp2.equals("")) {
                     egaDate = simpleDateFormat.parse(temp2);
                 }
 
-                if (sonoDate != null && egaDate != null)
-                {
+                if (sonoDate != null && egaDate != null) {
                     int dayCount = (int) getDaysBetweenDates(sonoDate, egaDate);
                     int weekCount = dayCount / 7;
                     dayCount = dayCount % 7;
@@ -137,38 +120,29 @@ public class CalculationsForCalendarScreen
 
                     cal.add(Calendar.DATE, 280);
                     toUpdateEditText.setText(simpleDateFormat.format(cal.getTime()));
-                }
-                else
-                {
+                } else {
                     egaTextView.setText(R.string.SONO_EGA);
                     toUpdateEditText.setText("");
                 }
             }
-        }
-        catch (ParseException e) {
+        } catch (ParseException e) {
             //Error
         }
     }
 
-    public long getDaysBetweenDates(Date d1, Date d2)
-    {
+    public long getDaysBetweenDates(Date d1, Date d2) {
         if (d2.before(d1)) {
             return -getDaysBetweenDates(d2, d1);
         }
 
         //Condition handling to account for Daylight Savings time if any
-        if(d1.getTimezoneOffset() > d2.getTimezoneOffset())
-        {
+        if (d1.getTimezoneOffset() > d2.getTimezoneOffset()) {
             //Adding 1 day if EGA as of Date is under Daylight saving and Sono/LMP date is not
-            return TimeUnit.MILLISECONDS.toDays(d2.getTime() - d1.getTime())+1;
-        }
-        else if(d1.getTimezoneOffset() < d2.getTimezoneOffset())
-        {
+            return TimeUnit.MILLISECONDS.toDays(d2.getTime() - d1.getTime()) + 1;
+        } else if (d1.getTimezoneOffset() < d2.getTimezoneOffset()) {
             //Removing 1 day if Sono/LMP date is under Daylight saving and EGA as of Date is not
-            return TimeUnit.MILLISECONDS.toDays(d2.getTime() - d1.getTime())-1;
-        }
-        else
-        {
+            return TimeUnit.MILLISECONDS.toDays(d2.getTime() - d1.getTime()) - 1;
+        } else {
             //Case if both times are of same type
             return TimeUnit.MILLISECONDS.toDays(d2.getTime() - d1.getTime());
         }

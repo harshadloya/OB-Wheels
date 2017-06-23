@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -18,15 +18,13 @@ public class MainScreen extends AppCompatActivity {
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item)
-        {
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            switch (item.getItemId())
-            {
+            switch (item.getItemId()) {
                 case R.id.navigation_home:
                     HomeScreen homeScreen = new HomeScreen();
-                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, homeScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.mainScreenTabColor));
@@ -34,7 +32,7 @@ public class MainScreen extends AppCompatActivity {
 
                 case R.id.navigation_disclaimer:
                     DisclaimerScreen disclaimerScreen = new DisclaimerScreen();
-                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, disclaimerScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.disclaimerTabColor));
@@ -42,7 +40,7 @@ public class MainScreen extends AppCompatActivity {
 
                 case R.id.navigation_aboutApp:
                     AboutAppScreen aboutAppScreen = new AboutAppScreen();
-                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, aboutAppScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.aboutAppTabColor));
@@ -50,7 +48,7 @@ public class MainScreen extends AppCompatActivity {
 
                 case R.id.navigation_references:
                     ReferencesScreen referencesScreen = new ReferencesScreen();
-                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, referencesScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.referencesTabColor));
@@ -58,7 +56,7 @@ public class MainScreen extends AppCompatActivity {
 
                 case R.id.navigation_moreApps:
                     MoreAppsScreen moreAppsScreen = new MoreAppsScreen();
-                    fragmentManager.popBackStack(null, fragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     fragmentTransaction.replace(R.id.content, moreAppsScreen);
                     fragmentTransaction.commit();
                     navigation.setBackgroundColor(getResources().getColor(R.color.moreAppsTabColor));
