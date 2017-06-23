@@ -17,10 +17,14 @@
         android:text="@string/ScreenName"
         android:textSize="20sp" />
 
-    <RelativeLayout
-        android:id="@+id/calendarCalculatorScreenRelative"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <RelativeLayout
+        android:id="@+id/calendarCalculatorScreenRelative"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/textView1"
@@ -121,7 +125,7 @@
             android:ems="2"
             android:imeOptions="actionDone"
             android:inputType="number"
-            android:text="0"
+            android:text="@string/ZeroValue"
             android:textAlignment="center" />
 
         <TextView
@@ -147,7 +151,7 @@
             android:ems="2"
             android:imeOptions="actionDone"
             android:inputType="number"
-            android:text="0"
+            android:text="@string/ZeroValue"
             android:textAlignment="center" />
 
         <TextView
@@ -278,6 +282,7 @@
             android:layout_marginTop="50dp"
             android:text="@string/ReconcileButton" />
 
-    </RelativeLayout>
 
+        </RelativeLayout>
+    </ScrollView>
 </LinearLayout>
