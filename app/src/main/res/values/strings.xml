@@ -71,24 +71,25 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
 
     <!-- Calculator Screen Texts -->
     <string name="ScreenName">"EDD Calculator Screen"</string>
-    <string name="LMP_EGA">"LMP Date Missing"</string>
-    <string name="SONO_EGA">"SONO Date Missing"</string>
+    <string name="LMP_EGA">"LMP Date\nMissing"</string>
+    <string name="SONO_EGA">"SONO Date\nMissing"</string>
     <string name="ReconcileButton">"Reconcile LMP &amp; Sono EDD's"</string>
     <string name="EGA">"EGA"</string>
-    <string name="EgaAsOf">"EGA as of"</string>
+    <string name="EgaAsOf">"EGA\nas of"</string>
     <string name="EDD">"EDD"</string>
-    <string name="LMPEditTextHint">"Enter LMP Date"</string>
-    <string name="SonoEditTextHint">"Enter Sono Date"</string>
-    <string name="EDDEditTextHint">"Enter EDD"</string>
+    <string name="LMPEditTextHint">"Select LMP\nDate"</string>
+    <string name="SonoEditTextHint">"Select Sono\nDate"</string>
+    <string name="EDDEditTextHint">"Select EDD"</string>
     <string name="days">"d"</string>
     <string name="weeks">"w"</string>
-    <string name="SonoEGA">"SONO EGA"</string>
-    <string name="DateOf">"Date of"</string>
+    <string name="SonoEGA">"SONO\nEGA"</string>
+    <string name="DateOf">"Date\nof"</string>
     <string name="Sono">"Sono"</string>
     <string name="LMPorEDD">"LMP or EDD"</string>
-    <string name="DatingBy">"Dating By:"</string>
-    <string name="SelectDate">"Click to Select Date"</string>
+    <string name="DatingBy">"Dating\nBy:"</string>
+    <string name="SelectDate">"Click to\nSelect Date"</string>
     <string name="ZeroValue">"0"</string>
+    <string name="SonoReport">"Enter Sono Report Details --->"</string>
 
     <!-- More Apps Screen Texts -->
     <string name="moreAppsScreen_title">"More apps for clinicians\nby Joshua Steinberg MD"</string>

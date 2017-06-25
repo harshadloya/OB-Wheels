@@ -64,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text2"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="25dp"
