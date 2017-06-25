@@ -2,7 +2,7 @@
 Referenced from https://www.codeproject.com/Articles/319401/Simple-Gestures-on-Android?msg=5031067
  */
 
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.content.Context;
 import android.graphics.Bitmap;

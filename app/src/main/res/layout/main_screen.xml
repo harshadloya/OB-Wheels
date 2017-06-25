@@ -7,14 +7,13 @@
     android:layout_height="match_parent"
     android:background="@color/lightBlueColor"
     android:orientation="vertical"
-    tools:context="edu.binghamton.hloya1.obwheels.MainScreen">
+    tools:context="com.drstein.hloya1.obwheels.MainScreen">
 
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1">
-
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView

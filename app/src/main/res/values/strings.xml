@@ -88,6 +88,7 @@ There are many schemes for reconciling LMP &amp; Sono-based due dates into a fin
     <string name="LMPorEDD">"LMP or EDD"</string>
     <string name="DatingBy">"Dating By:"</string>
     <string name="SelectDate">"Click to Select Date"</string>
+    <string name="ZeroValue">"0"</string>
 
     <!-- More Apps Screen Texts -->
     <string name="moreAppsScreen_title">"More apps for clinicians\nby Joshua Steinberg MD"</string>

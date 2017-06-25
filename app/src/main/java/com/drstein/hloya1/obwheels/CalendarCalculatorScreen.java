@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,8 +21,7 @@ import java.util.Date;
  * Created by hloya on 3/29/2017.
  */
 
-public class CalendarCalculatorScreen extends Fragment
-{
+public class CalendarCalculatorScreen extends Fragment {
     CalculationsForCalendarScreen cs1;
     CalculationsForCalendarScreen cs2;
     private Button textButton;
@@ -62,8 +61,7 @@ public class CalendarCalculatorScreen extends Fragment
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.calendarcalculator_screen, container, false);
 
@@ -73,8 +71,7 @@ public class CalendarCalculatorScreen extends Fragment
         button = (Button) view.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 EDDSettingDetailsScreen eddSettingDetailsScreen = new EDDSettingDetailsScreen();
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.content, eddSettingDetailsScreen);
@@ -89,10 +86,10 @@ public class CalendarCalculatorScreen extends Fragment
         editText2 = (Button) view.findViewById(R.id.editText2);
 
         editText3 = (EditText) view.findViewById(R.id.editText3);
-        editText3.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "40")});
+        editText3.setFilters(new InputFilter[]{new InputFilterMinMax("0", "40")});
 
         editText4 = (EditText) view.findViewById(R.id.editText4);
-        editText4.setFilters(new InputFilter[]{ new InputFilterMinMax("0", "6")});
+        editText4.setFilters(new InputFilter[]{new InputFilterMinMax("0", "6")});
 
         editText5 = (Button) view.findViewById(R.id.editText5);
 
@@ -118,29 +115,22 @@ public class CalendarCalculatorScreen extends Fragment
         return view;
     }
 
-    private void editTextListRecurse(ViewGroup container)
-    {
+    private void editTextListRecurse(ViewGroup container) {
         int count = container.getChildCount();
 
         for (int i = 0; i < count; i++) {
             View child = container.getChildAt(i);
-            if (child instanceof Button)
-            {
+            if (child instanceof Button) {
                 textButton = (Button) child;
 
                 int currId = textButton.getId();
-                if((currId == R.id.editText3) || (currId == R.id.editText4) || (currId == R.id.editText6))
-                {
+                if ((currId == R.id.editText3) || (currId == R.id.editText4) || (currId == R.id.editText6)) {
                     //Do nothing - Use default system keypad if editable
-                }
-                else
-                {
+                } else {
                     //editText.setOnFocusChangeListener(mOnFocusChangeListener);
                     textButton.setOnClickListener(mOnClickListener);
                 }
-            }
-            else if (child instanceof ViewGroup)
-            {
+            } else if (child instanceof ViewGroup) {
                 //recurse through children views
                 editTextListRecurse((ViewGroup) child);
             }

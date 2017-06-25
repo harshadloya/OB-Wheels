@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/homeScreen"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightBlueColor"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:background="@color/lightBlueColor">
+
+    <LinearLayout
+        android:id="@+id/homeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/message"
@@ -14,7 +18,7 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="35dp"
             android:text="@string/home_screen_text"
             android:textAlignment="center"
             android:textSize="19sp" />
@@ -76,4 +80,5 @@
             android:text="@string/home_screen_belowButton3"
             android:textAlignment="center" />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

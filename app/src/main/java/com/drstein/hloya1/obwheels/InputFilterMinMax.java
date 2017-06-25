@@ -1,4 +1,4 @@
-package edu.binghamton.hloya1.obwheels;
+package com.drstein.hloya1.obwheels;
 
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -27,7 +27,8 @@ public class InputFilterMinMax implements InputFilter {
             int input = Integer.parseInt(newVal);
             if (isInRange(min, max, input))
                 return null;
-        } catch (NumberFormatException nfe) { }
+        } catch (NumberFormatException nfe) {
+        }
         return "";
     }
 
