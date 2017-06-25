@@ -10,7 +10,7 @@
         android:id="@+id/screenname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -26,42 +26,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/DatingBy"
-            android:textSize="17sp" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/DatingBy"
+                android:textSize="17sp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView1"
-            android:layout_marginLeft="25dp"
-            android:layout_marginStart="25dp"
-            android:layout_toEndOf="@+id/textView1"
-            android:layout_toRightOf="@+id/textView1"
-            android:text="@string/LMPorEDD"
-            android:textSize="19sp" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/textView1"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="@string/LMPorEDD"
+                android:textSize="19sp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView1"
-            android:layout_marginLeft="85dp"
-            android:layout_marginStart="85dp"
-            android:layout_toEndOf="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
-            android:text="@string/Sono"
-            android:textSize="19sp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_marginLeft="55dp"
+                android:layout_marginStart="55dp"
+                android:layout_toEndOf="@+id/textView2"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="@string/Sono"
+                android:textSize="19sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -70,34 +70,34 @@
                 android:layout_alignLeft="@+id/textView1"
                 android:layout_alignStart="@+id/textView1"
                 android:layout_below="@+id/textView1"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/DateOf"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/editText1"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/textView4"
-            android:layout_toRightOf="@+id/textView4"
-            android:text="@string/LMPEditTextHint"
-            android:textAlignment="center" />
+            <Button
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:text="@string/LMPEditTextHint"
+                android:textAlignment="center" />
 
-        <Button
-            android:id="@+id/editText2"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_toEndOf="@+id/editText1"
-            android:layout_toRightOf="@+id/editText1"
-            android:text="@string/SonoEditTextHint"
-            android:textAlignment="center" />
+            <Button
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/editText1"
+                android:layout_toRightOf="@+id/editText1"
+                android:text="@string/SonoEditTextHint"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -110,19 +110,6 @@
                 android:text="@string/SonoEGA"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/sonoReportTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView1"
-                android:layout_alignStart="@+id/textView1"
-                android:layout_below="@+id/textView4"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/SonoReport"
-                android:textSize="16sp" />
-
             <EditText
                 android:id="@+id/editText3"
                 android:layout_width="30dp"
@@ -130,8 +117,8 @@
                 android:layout_alignBaseline="@+id/textView10"
                 android:layout_alignLeft="@+id/editText2"
                 android:layout_alignStart="@+id/editText2"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/textView10"
                 android:layout_toRightOf="@+id/textView10"
                 android:ems="2"
@@ -169,7 +156,7 @@
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="7dp"
+                android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView10"
                 android:layout_marginLeft="1dp"
@@ -193,7 +180,7 @@
 
             <Button
                 android:id="@+id/editText5"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView13"
                 android:layout_alignLeft="@+id/editText1"
@@ -204,7 +191,7 @@
             <Button
                 android:id="@+id/editText6"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView13"
                 android:layout_alignLeft="@+id/editText2"
@@ -220,14 +207,14 @@
                 android:layout_alignLeft="@+id/textView1"
                 android:layout_alignStart="@+id/textView1"
                 android:layout_below="@+id/textView13"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/EgaAsOf"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
             <Button
                 android:id="@+id/editText7"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView14"
                 android:layout_alignLeft="@+id/editText1"
@@ -237,7 +224,7 @@
 
             <Button
                 android:id="@+id/editText8"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView14"
                 android:layout_alignLeft="@+id/editText2"
@@ -254,7 +241,7 @@
                 android:layout_alignLeft="@+id/textView1"
                 android:layout_alignStart="@+id/textView1"
                 android:layout_below="@+id/textView14"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:text="@string/EGA"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -266,8 +253,8 @@
                 android:layout_alignBaseline="@+id/textView15"
                 android:layout_alignLeft="@+id/editText1"
                 android:layout_alignStart="@+id/editText1"
-                android:layout_marginLeft="25dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/textView15"
                 android:layout_toRightOf="@+id/textView15"
                 android:text="@string/LMP_EGA"
@@ -281,8 +268,8 @@
                 android:layout_alignBaseline="@+id/textView15"
                 android:layout_alignLeft="@+id/editText2"
                 android:layout_alignStart="@+id/editText2"
-                android:layout_marginLeft="25dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/lmpega"
                 android:layout_toRightOf="@+id/lmpega"
                 android:text="@string/SONO_EGA"
@@ -296,7 +283,7 @@
                 android:layout_alignLeft="@+id/textView1"
                 android:layout_alignStart="@+id/textView1"
                 android:layout_below="@+id/lmpega"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/ReconcileButton" />
 
         </RelativeLayout>

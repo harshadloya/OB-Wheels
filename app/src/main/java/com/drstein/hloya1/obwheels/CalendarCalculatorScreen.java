@@ -1,10 +1,12 @@
 package com.drstein.hloya1.obwheels;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.InputFilter;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,7 +65,19 @@ public class CalendarCalculatorScreen extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.calendarcalculator_screen, container, false);
+
+        View view;
+
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+
+        if (width >= 720) {
+            view = inflater.inflate(R.layout.calendarcalculator_screen, container, false);
+        } else {
+            view = inflater.inflate(R.layout.calendarcalculator_screen_smalldevices, container, false);
+        }
 
         //Handling all the editText fields together
         editTextListRecurse((ViewGroup) view);

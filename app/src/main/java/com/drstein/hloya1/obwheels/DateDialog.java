@@ -171,7 +171,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
                 int weekCount = dayCount / 7;
                 dayCount = dayCount % 7;
 
-                lmpOrSonoEgaTextView.setText(weekCount + " Weeks, " + dayCount + " Days");
+                lmpOrSonoEgaTextView.setText(weekCount + " Weeks,\n" + dayCount + " Days");
 
                 calendar.add(Calendar.DATE, 280);
                 toUpdateEditText.setText(simpleDateFormat.format(calendar.getTime()));
@@ -208,7 +208,7 @@ public class DateDialog extends DialogFragment implements DatePickerDialog.OnDat
                 int weekCount = dayCount / 7;
                 dayCount = dayCount % 7;
 
-                lmpOrSonoEgaTextView.setText(weekCount + " Weeks, " + dayCount + " Days");
+                lmpOrSonoEgaTextView.setText(weekCount + " Weeks,\n" + dayCount + " Days");
             } else {
                 if (editedEditText.getId() == R.id.editText1) {
                     lmpOrSonoEgaTextView.setText(R.string.LMP_EGA);
