@@ -13,7 +13,7 @@
 
     <!-- About App Screen Texts -->
     <string name="aboutapp_screen_heading">"Development of App"</string>
-    <string name="aboutapp_text">"Written to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton, Class of 2017\n\tharshadloya@gmail.com\n\n  Prof. Patrick Madden,\n\tSUNY - Binghamton\n\n\nFeedback:\n\tjds.pocapps@gmail.com\n\tPlatform: Android 4.0.3 and later\n\tVersion: 1.0\n\tCopyright: April, 2017"</string>
+    <string name="aboutapp_text">"Written to put due date calculator tools and information about setting the due date in the hands of clinicians, students, and residents at the point of care.\n\nContent+Design:\n  Joshua Steinberg MD,\n\tUHS Wilson Family Practice Residency,\n\tBinghamton, NY\n\nProgrammer:\n  Harshad C. Loya,\n\tMS - Computer Science,\n\tSUNY - Binghamton, Class of 2017\n\tharshadloya@gmail.com\n\n  Prof. Patrick Madden,\n\tSUNY - Binghamton\n\n\nFeedback:\n\tjds.pocapps@gmail.com\n\tPlatform: Android 4.0.3 and later\n\tVersion: 1.1\n\tCopyright: April, 2017"</string>
 
     <!-- References Screen Texts -->
     <string name="ref_screen_text">"References Screen"</string>
