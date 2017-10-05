@@ -13,7 +13,9 @@ Finally, the app notes the most recent committee opinion scheme from ACOG on how
 ### How do I get set up? ###
 
 Download the repository.
+
 Import the project from downloaded repository in Android Studio.
+
 Use Android Studio to run the application.
 
 Requires Android 4.0.3 and up
@@ -25,4 +27,5 @@ Project Content and Design by Dr. Joshua Steinberg MD
 ### Who do I talk to? ###
 
 Harshad Loya
+
 harshadloya@gmail.com / hloya1@binghamton.edu
