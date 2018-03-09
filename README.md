@@ -1,6 +1,6 @@
 # README #
 
-### Android App OB Wheels Project 5 for CS541? ###
+### Android App OB Wheels Project 5 for CS541 ###
 
 Does the world need another OB-wheel-due-date-calculator app? You bet! OB Wheels combines three things that clinicians need to derive all the dates necessary in pregnancy care, and no other app has this combination. 
 
